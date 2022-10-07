@@ -1,0 +1,481 @@
+/* Paleta de colores                       */
+/* #69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900 */
+
+html {
+    overflow-x: hidden;
+}
+/* se aplicó overflow-x para evitar desplazamiento del nav fixed hacia la derecha (?) */
+/* se utilizó la propiedad position solamente en el header, con fines estéticos para esta entrega.
+Luego serán reemplazados por flex y grid */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none; 
+    list-style-type: none;
+}
+
+/* Estilos generales */
+
+body {
+    background-color: #A7DBD8;
+    height: 100vh;
+}
+footer {
+    height: 38vh;
+}
+
+/* header: img en fondo, con logo y titulo vinculados */
+
+header {
+    height: 420px;
+    outline: 5px solid #F38630;
+}
+.header--montaña {
+    width: 100%;
+    height: 420px;    
+}
+.div--header {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    top: -150px;
+}
+.logo--globo {    
+    background-color: none;
+    width: 150px;
+    display: inline;
+    position: absolute;  
+    top: -80px;
+    left: 90px;
+}
+.titulo--header { 
+    color: #E0E4CC;
+    display: inline-block;
+    background: none;
+    position: relative;
+    height: 75px;
+    top: 80px;
+    left: 61px;
+    text-align: center;
+}
+
+/* nav header 4 secciones vinculadas a cada .html, 
+no se termina de alinear en el lugar deseado (a la espera de utilizar flex y grid */
+
+.div--nav {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    top: -200px;
+}
+.nav--header--img {
+    width: 65px;
+}
+.nav--header ul {
+    text-align: right;    
+}
+.nav--header li {
+    display: inline-block;
+    margin-bottom: 70px;
+    text-align: center;
+}
+.nav--header a {
+    display: inline-block;
+    background-color: #F38630;
+    color: #E0E4CC;
+    border-radius: 10px;
+    width: 100px;
+    margin: 20px;
+    /* padding: 5px 5px 0; */
+}
+
+/* nav fixed al inicio de pagina (top: 0;)*/
+
+.nav--fixed {
+    background-color: #F38630;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 85px;  
+    padding: 5px;
+    text-align: center;
+}
+/* icono para volver al inicio en nav fixed*/
+.nav--fixed--icono--index {
+    width: 45px;
+    margin-right: 150px;
+}
+.nav--fixed--icono {
+    width: 45px;    
+}
+.nav--fixed li {
+    display: inline-block;    
+    margin: 0 30px;
+}
+.nav--fixed a {
+    display: inline-block;
+    color: #E0E4CC;
+}
+
+/* cuadro de busqueda rapida */
+
+fieldset {
+    color: #E0E4CC;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #F38630;
+    padding: auto;
+    margin: 20px auto 0px;
+    width: 620px;
+}
+fieldset p { 
+    color: #E0E4CC;
+    text-align: center;
+    background-color: #F38630;
+    padding: 10px 10px 10px 10px;
+    font-size: 40px;
+}
+label {
+    margin-left: 30px;
+}
+fieldset input {
+    background-color: #E0E4CC;
+    margin: 10px 20px 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;    
+}
+.button--busqueda--rapida {
+    background-color: #69d2e7;  
+    color: #E0E4CC;
+    font-size: 25px;
+    width: 100px;
+    margin: 10px 30px 15px 250px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* seccion destinos mas visitados */
+
+.section--destinos {
+    text-align: center;
+}
+.pin {
+    display: inline-block;
+    width: auto;
+    height: 105px;
+    background-color: #E0E4CC;
+    margin-top: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 0px;    
+}
+.section--destinos h2 {
+    background-color: #E0E4CC;
+    color: #F38630;
+    border-radius: 20px;
+    margin: 0 0 25px 10px;
+    padding: 0 10px;    
+    display: inline-block;
+    font-size: 45px;
+}
+.section--destinos h2 a {
+    color:#F38630;
+}
+.cards--destinos {
+    background-color: #F38630;
+    border: 2px solid transparent;
+    width: 570px;
+    border-radius: 10px;
+    margin: 0 30px 15px 50px;
+    display: inline-block;
+}
+.fotoDestinos {
+    width: 535px;
+    max-height: 300px;
+    margin: 15px 0 10px 0px;
+    border-radius: 10px;
+    object-fit: auto;
+}
+.parrafo--destinos {
+    margin: 0 30px 20px;    
+}
+.parrafo--destinos p {
+    color: #E0E4CC;   
+}
+.button--quieroViajar {
+    background-color: #69d2e7;
+    color: #E0E4CC;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 12px 12px;
+    margin: 0 190px 20px ;
+    display: inline-block;
+    width: 170px;    
+}
+
+/* seccion APP */
+
+.app {
+    background-color: #F38630;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    width: 600px;
+}
+.app--img {
+    display: inline-block;
+    margin: 20px 10px 20px 10px;
+    text-align: center;
+}
+.app--img img {    
+    background-color: none;
+    width: 150px;
+}
+.app h3 {
+    color: #E0E4CC;
+    font-size: 50px;
+    display: inline-block;
+    margin: 0 10px 30px 30px; 
+}
+.app p {
+    color: #E0E4CC;
+    width: 500px;
+    display: inline-block;
+}
+.app--img--qr {
+    background-color: #E0E4CC;
+    border-radius: 20%;
+    width: 200px;
+    padding: 35px;
+    margin: 20px;
+}
+
+/* seccion suscripciones */
+
+.subs {
+    background-color: #F38630;
+    height: 380px;
+    width: 600px;
+    border-radius: 10px;
+    margin: 30px auto;
+    text-align: center;
+}
+.subs--texto h3 {
+    text-align: center;
+    color: #E0E4CC;
+    font-size: 40px;
+    margin: 20px;
+}
+.subs p {
+    color: #E0E4CC;    
+    font-size: 30px;
+    text-align: center;
+}
+.subs--img {
+    text-align: center;
+}
+.logo--subs {
+    width: 100px;
+    margin: 20px;
+}
+.subs input {
+    background-color: #69d2e7;
+    border: none;  
+    width: 200px;
+    font-size: 25px;
+    color: #E0E4CC;
+    margin: 20px 0px 15px 0px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #F38630;
+    border-radius: 10px;
+    height: auto;
+    margin: 0 auto;
+}
+.div--redes { 
+    height: 90px;   
+    text-align: center;
+    margin: 20px;
+}
+.logo--redes {
+    background-color: none;
+    width: 70px;
+    display: inline-block;
+    margin: 10px 40px;
+}
+footer h4 {
+    color: #E0E4CC;
+    font-size: 40px;   
+    margin: 10px 0;
+}
+.div--mapa {
+    margin: 0 auto;
+    width: 450px;
+    text-align: center;
+}
+.logo--mapa {
+    background-color: none;
+    width: 100px;
+    cursor: pointer;
+}
+.div--geaweb{
+    text-align: center;    
+}
+.logo--geaweb {
+    background-color: #E0E4CC;
+    border-radius: 50%;
+    margin: 20px auto 10px auto;
+    padding: 5px;
+    width: 70px;
+    display: block;    
+}
+footer p {
+    background-color: #E0E4CC;
+    color: #F38630;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 22px;
+}
+
+/* Inicio sesion.html */
+
+.inicio--sesion {
+    background-color: #F38630;
+    width: 40vw;
+    height: 380px;
+    border-radius: 10px;
+    margin: 40px auto;
+    text-align: center;
+}
+.inicio--sesion h2 {
+    color: #E0E4CC;
+    font-size: 60px;
+    text-align: center;
+}
+.div--sesion img {
+    width: 50px;
+    margin: 5px;
+    text-align: center;
+}
+.div--sesion input {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+.lista--inicio--sesion {
+    text-align: center;
+}
+.lista--inicio--sesion input {
+    background-color: #E0E4CC;
+}
+.inicio--sesion h3 {
+    color: #E0E4CC;
+    font-size: 30px;
+}
+
+/* crearCuenta.html */
+
+.section--crear--cuenta {
+    background-color: #F38630;
+    width: 700px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px auto;
+}
+.section--crear--cuenta h2 {
+    color: #E0E4CC;
+    font-size: 65px;
+}
+.form--cuenta--nueva {
+    background-color: #F38630;
+    margin: 20px auto;
+    padding-top: 5px;
+    width: 420px;
+    border-radius: 10px;
+    text-align: center;
+}
+.form--cuenta--nueva fieldset {
+    width: 420px;
+    margin: 0 auto;
+}
+.form--cuenta--nueva legend {
+    font-size: 25px;
+}
+.form--cuenta--nueva input {
+    background-color: #E0E4CC;
+    margin: 10px 20px 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+.input--cuenta--nueva {
+    font-size: 30px;
+    font-weight: bold;
+    color: #69d2e7;
+    cursor: pointer;
+}
+
+/* Nosotros.html */
+
+.somos--titulo {
+    background-color: #F38630;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 600px;
+}
+.somos--titulo h1 {
+    color: #E0E4CC;    
+    font-size: 75px;
+}
+.nosotros--logo--globo {    
+    background-color: none;
+    margin: 15px 0;
+    width: 150px;
+}
+.div--nosotros--fotos {
+    border-radius: 10px;
+    width: 72vw;
+    padding: 5px;
+    margin: 0 auto;
+}
+.div--nosotros--fotos img {
+    border-radius: 10px;
+    padding: 5px;
+    width: 400px;
+}
+.div--nosotros--texto {
+    background-color: #F38630;
+    border-radius: 10px;
+    height: 300px;
+    margin: 30px 35px;
+}
+.div--nosotros--texto h2 {
+    color: #E0E4CC;
+    margin: 0 20px;
+    font-size: 65px;
+}
+.div--nosotros--texto p {
+    color: #E0E4CC;
+    text-align: justify;
+    margin: 10px 20px;
+}
