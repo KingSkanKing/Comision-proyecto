@@ -2,11 +2,9 @@
 /* #69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900 */
 
 html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 /* se aplicó overflow-x para evitar desplazamiento del nav fixed hacia la derecha (?) */
-/* se utilizó la propiedad position solamente en el header, con fines estéticos para esta entrega.
-Luego serán reemplazados por flex y grid */
 
 * {
     margin: 0;
@@ -19,108 +17,122 @@ Luego serán reemplazados por flex y grid */
 
 /* Estilos generales */
 
-body {
-    background-color: #A7DBD8;
-    height: 100vh;
+.body {
+    background-image: linear-gradient(to top, #e0e4cc, #d6e3cb, #cae1cb, #bfe0cd, #b4ded1, #abddd3, #a2dbd6, #99d9da, #8ed7dc, #82d6df, #76d4e3, #69d2e7);
 }
 footer {
     height: 38vh;
 }
 
 /* header: img en fondo, con logo y titulo vinculados */
-
-header {
-    height: 420px;
-    outline: 5px solid #F38630;
-}
-.header--montaña {
+.header-container{
+    background: url(../assets/HeaderMontaña.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 9px black;
     width: 100%;
-    height: 420px;    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 105px);
+    grid-template-areas: 
+    "nav--fixed nav--fixed nav--fixed nav--fixed"
+    "div--header div--header div--nav div--nav"
+    "div--header div--header div--nav div--nav"
+    "div--header div--header div--nav div--nav"
+    ;
 }
 .div--header {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    top: -150px;
+    grid-area: div--header;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 .logo--globo {    
     background-color: none;
-    width: 150px;
-    display: inline;
-    position: absolute;  
-    top: -80px;
-    left: 90px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .titulo--header { 
     color: #E0E4CC;
-    display: inline-block;
+    margin-left: 30px;
+    font-size: 40px;
     background: none;
-    position: relative;
-    height: 75px;
-    top: 80px;
-    left: 61px;
-    text-align: center;
+    display: flex;
+    align-items: flex-end;
 }
 
-/* nav header 4 secciones vinculadas a cada .html, 
-no se termina de alinear en el lugar deseado (a la espera de utilizar flex y grid */
+/* nav header 4 secciones vinculadas a cada .html */
 
 .div--nav {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    top: -200px;
+    grid-area: div--nav;
+    display: flex;
+    justify-content: end;
+    align-items: start;    
 }
-.nav--header--img {
-    width: 65px;
+.nav--header a:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 1px #69d2e7;
+}
+.nav--header--img {    
+    width: 55px;
+    height: 55px;
+    margin-top: 5px;
 }
 .nav--header ul {
-    text-align: right;    
-}
-.nav--header li {
-    display: inline-block;
-    margin-bottom: 70px;
-    text-align: center;
+    display: flex;
+    text-align: center;   
 }
 .nav--header a {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
     background-color: #F38630;
     color: #E0E4CC;
-    border-radius: 10px;
-    width: 100px;
-    margin: 20px;
-    /* padding: 5px 5px 0; */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0px 30px;
 }
 
 /* nav fixed al inicio de pagina (top: 0;)*/
 
 .nav--fixed {
+    grid-area: nav--fixed;
     background-color: #F38630;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     position: fixed;
-    top: 0;
     width: 100%;
-    height: 85px;  
-    padding: 5px;
+    height: 95px;  
     text-align: center;
 }
-/* icono para volver al inicio en nav fixed*/
-.nav--fixed--icono--index {
+.nav--fixed--ul {
+    margin-top: 15px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav--fixed--ul img {
     width: 45px;
-    margin-right: 150px;
 }
-.nav--fixed--icono {
-    width: 45px;    
-}
-.nav--fixed li {
-    display: inline-block;    
-    margin: 0 30px;
+.nav--fixed--ul li {
+    display: flex;
+    justify-content: center;
 }
 .nav--fixed a {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;    
+    height: 80px;
+    align-items: center;
     color: #E0E4CC;
 }
+/* .nav--fixed a:hover {
+    
+} */
 
 /* cuadro de busqueda rapida */
 
@@ -478,4 +490,12 @@ footer p {
     color: #E0E4CC;
     text-align: justify;
     margin: 10px 20px;
+}
+/* TABLET RESPONSIVE */
+@media (max-width: 768px) {
+    
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 576px) {
+    
 }
