@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,10 +13,13 @@
   <!--favicon-->
   <title>Viajes y Turismo</title>
 </head>
+
 <body>
   <div class="body">
-    <header class="header-container"><!-- <img class="header--montaña" src="./assets/imgHeaderMontaña.jpg" alt="escalar una montaña"> -->
-      <div class="div--header"><!--div con logo y h1 vinculados-->
+    <header class="header-container">
+      <!-- <img class="header--montaña" src="./assets/imgHeaderMontaña.jpg" alt="escalar una montaña"> -->
+      <div class="div--header">
+        <!--div con logo y h1 vinculados-->
         <img class="logo--globo" src="../proyecto/assets/mundologo.png" alt="Logo Viajes y Turismo">
         <h1 class="titulo--header">Viajes y Turismo</h1>
       </div>
@@ -56,37 +60,30 @@
     </header>
     <main>
       <section><!--cuadro de busqueda rapida-->
-        <div>
-          <fieldset>
-            <p>¡¡ Comienza tu viaje soñado !!</p>
-            <div>
-              <form>
-                <!-- <label>destino</label> -->
-                <div>
-                  <!--origen-->
-                  <input type="search" name="origen" placeholder="Origen">
-                  <label for="salida"> Fecha de salida: </label>
-                  <input type="date" name="fecha" placeholder="dd/mm/aaaa">
-                </div>
-                <div>
-                  <!--destino-->
-                  <input type="search" name="origen" placeholder="Destino">
-                  <label for="llegada">Fecha de llegada:</label>
-                  <input type="date" name="fecha" placeholder="dd/mm/aaaa">
-                </div>
-                <div>
-                  <!--reservas-->
-                  <label for="pasajeros">Pasajeros</label>
-                  <input type="number" min="1" max="10" placeholder="1">
-                  <label for="menores">Menores</label>
-                  <input type="number" min="1" max="5" placeholder="1">
-                  <label for="habitaciones">Habitaciones</label>
-                  <input type="number" min="1" max="3" placeholder="1">
-                </div>
-                <input class="button--busqueda--rapida" type="submit" value="Buscar">
-              </form>
-            </div>
-          </fieldset>
+        <div class="busqueda-container">
+          <p>¡¡ Comienza tu viaje soñado !!</p>
+          <div class="origen">
+            <!--origen-->
+            <input type="search" name="origen" placeholder="Origen">
+            <label for="salida"> Fecha de salida: </label>
+            <input type="date" name="fecha">
+          </div>
+          <div class="destino">
+            <!--destino-->
+            <input type="search" name="origen" placeholder="Destino">
+            <label for="llegada">Fecha de llegada:</label>
+            <input type="date" name="fecha">
+          </div>
+          <div class="reservas">
+            <!--reservas-->
+            <label for="pasajeros">Pasajeros</label>
+            <input type="number" min="1" max="10" placeholder="1">
+            <label for="menores">Menores</label>
+            <input type="number" min="1" max="5" placeholder="1">
+            <label for="habitaciones">Habitaciones</label>
+            <input type="number" min="1" max="3" placeholder="1">
+          </div>
+          <input class="button--busqueda--rapida" type="submit" value="Buscar">
         </div>
       </section>
       <section class="section--destinos">
@@ -223,4 +220,5 @@
     </footer>
   </div>
 </body>
+
 </html>

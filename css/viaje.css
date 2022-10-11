@@ -1,11 +1,6 @@
 /* Paleta de colores                       */
 /* #69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900 */
 
-html {
-    /* overflow-x: hidden; */
-}
-/* se aplicó overflow-x para evitar desplazamiento del nav fixed hacia la derecha (?) */
-
 * {
     margin: 0;
     padding: 0;
@@ -102,7 +97,7 @@ footer {
 
 .nav--fixed {
     grid-area: nav--fixed;
-    background-color: #F38630;
+    background-color: #f38530e1;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     position: fixed;
@@ -136,27 +131,56 @@ footer {
 
 /* cuadro de busqueda rapida */
 
-fieldset {
+.busqueda-container {
+    margin: 20px 40px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(5, 100px);
+    /* grid-template-areas: 
+    "p p p"
+    "origen origen origen"
+    "destino destino destino"
+    "reservas reservas reservas"
+    "buscar buscar buscar";
+    justify-content: center;
+    align-content: center;
+    justify-items: center; */
     color: #E0E4CC;
     font-weight: bold;
     border: 1px solid transparent;
     border-radius: 5px;
-    background-color: #F38630;
-    padding: auto;
-    margin: 20px auto 0px;
-    width: 620px;
+    background-color: #F38630;    
 }
-fieldset p { 
+.busqueda-container p { 
+    /* grid-area: p; */
+    grid-column: ;
+    grid-row: ;
     color: #E0E4CC;
     text-align: center;
     background-color: #F38630;
     padding: 10px 10px 10px 10px;
     font-size: 40px;
 }
+.origen {
+    grid-area: origen;
+    justify-content: center;
+    background-color: olive;
+}
+.destino {
+    grid-area: destino;
+    background-color: palevioletred;
+}
+.reservas {
+    grid-area: reservas;
+    background-color: crimson;
+}
 label {
     margin-left: 30px;
 }
-fieldset input {
+.busqueda-container input {
+    
+    justify-self: center;
     background-color: #E0E4CC;
     margin: 10px 20px 10px;
     border-radius: 5px;
@@ -164,6 +188,7 @@ fieldset input {
     padding: 5px;    
 }
 .button--busqueda--rapida {
+    grid-area: buscar;
     background-color: #69d2e7;  
     color: #E0E4CC;
     font-size: 25px;
