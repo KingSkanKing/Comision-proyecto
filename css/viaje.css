@@ -135,15 +135,15 @@ footer {
     margin: 20px 40px;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(5, 240px);
+    grid-template-rows: repeat(4, 100px);
     /* grid-template-areas: 
     "p p p"
     "origen origen origen"
     "destino destino destino"
     "reservas reservas reservas"
-    "buscar buscar buscar";
-    justify-content: center;
+    "buscar buscar buscar";*/
+    /* justify-content: center;
     align-content: center;
     justify-items: center; */
     color: #E0E4CC;
@@ -154,32 +154,37 @@ footer {
 }
 .busqueda-container p { 
     /* grid-area: p; */
-    grid-column: ;
-    grid-row: ;
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
     color: #E0E4CC;
-    text-align: center;
-    background-color: #F38630;
     padding: 10px 10px 10px 10px;
     font-size: 40px;
 }
 .origen {
-    grid-area: origen;
+    /* grid-area: origen; */
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
     justify-content: center;
     background-color: olive;
 }
 .destino {
-    grid-area: destino;
+    /* grid-area: destino; */
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
     background-color: palevioletred;
 }
 .reservas {
-    grid-area: reservas;
+    /* grid-area: reservas; */
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
     background-color: crimson;
 }
 label {
     margin-left: 30px;
 }
 .busqueda-container input {
-    
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
     justify-self: center;
     background-color: #E0E4CC;
     margin: 10px 20px 10px;
@@ -188,7 +193,7 @@ label {
     padding: 5px;    
 }
 .button--busqueda--rapida {
-    grid-area: buscar;
+    /* grid-area: buscar; */
     background-color: #69d2e7;  
     color: #E0E4CC;
     font-size: 25px;
