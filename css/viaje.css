@@ -1,5 +1,5 @@
 /* Paleta de colores                       */
-/* #69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900 */
+/* #69D2E7,#A7DBD8,#E0E4CC,#f38530e1,#FA6900 */
 
 * {
     margin: 0;
@@ -13,87 +13,14 @@
 /* Estilos generales */
 
 .body {
+    width: 100%;    
     background-image: linear-gradient(to top, #e0e4cc, #d6e3cb, #cae1cb, #bfe0cd, #b4ded1, #abddd3, #a2dbd6, #99d9da, #8ed7dc, #82d6df, #76d4e3, #69d2e7);
 }
 footer {
     height: 38vh;
 }
 
-/* header: img en fondo, con logo y titulo vinculados */
-.header-container{
-    background: url(../assets/HeaderMontaña.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 5px 5px 9px black;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 105px);
-    grid-template-areas: 
-    "nav--fixed nav--fixed nav--fixed nav--fixed"
-    "div--header div--header div--nav div--nav"
-    "div--header div--header div--nav div--nav"
-    "div--header div--header div--nav div--nav"
-    ;
-}
-.div--header {
-    grid-area: div--header;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-.logo--globo {    
-    background-color: none;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.titulo--header { 
-    color: #E0E4CC;
-    margin-left: 30px;
-    font-size: 40px;
-    background: none;
-    display: flex;
-    align-items: flex-end;
-}
-
-/* nav header 4 secciones vinculadas a cada .html */
-
-.div--nav {
-    grid-area: div--nav;
-    display: flex;
-    justify-content: end;
-    align-items: start;    
-}
-.nav--header a:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 1px #69d2e7;
-}
-.nav--header--img {    
-    width: 55px;
-    height: 55px;
-    margin-top: 5px;
-}
-.nav--header ul {
-    display: flex;
-    text-align: center;   
-}
-.nav--header a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
-    background-color: #F38630;
-    color: #E0E4CC;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin: 0px 30px;
-}
-
-/* nav fixed al inicio de pagina (top: 0;)*/
+/* nav fixed al inicio de pagina */
 
 .nav--fixed {
     grid-area: nav--fixed;
@@ -129,78 +56,174 @@ footer {
     
 } */
 
-/* cuadro de busqueda rapida */
+/* header: img en fondo, con logo y titulo vinculados */
 
-.busqueda-container {
-    margin: 20px 40px;
-    height: auto;
+.header-container{
+    background: url(../assets/headerMontaña.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 9px black;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 240px);
-    grid-template-rows: repeat(4, 100px);
-    /* grid-template-areas: 
-    "p p p"
-    "origen origen origen"
-    "destino destino destino"
-    "reservas reservas reservas"
-    "buscar buscar buscar";*/
-    /* justify-content: center;
-    align-content: center;
-    justify-items: center; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 105px);
+    grid-template-areas: 
+    "nav--fixed nav--fixed nav--fixed nav--fixed"
+    "div--header div--header div--nav div--nav"
+    "div--header div--header div--nav div--nav"
+    "div--header div--header div--nav div--nav";
+}
+.div--header {
+    grid-area: div--header;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.logo--globo {    
+    background-color: none;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo--header { 
+    color: #E0E4CC;
+    margin-left: 30px;
+    font-size: 60px;
+    background: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* nav header 4 secciones vinculadas a cada .html */
+
+.div--nav {
+    grid-area: div--nav;
+    display: flex;
+    justify-content: end;
+    align-items: start;    
+}
+.nav--header a:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 1px #69d2e7;
+}
+.nav--header--img {    
+    width: 55px;
+    height: 55px;
+    margin-top: 5px;
+}
+.nav--header ul {
+    display: flex;
+    text-align: center;   
+}
+.nav--header a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    background-color: #f38530e1;
+    color: #E0E4CC;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 0px 30px;
+}
+
+/* cuadro de busqueda rapida */
+.busqueda-grid {
+    display: grid;
+    justify-content: center;
+}
+.busqueda-container {
+    margin: 40px 40px;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 110px);
+    grid-template-rows: repeat(4, 90px);
     color: #E0E4CC;
     font-weight: bold;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    background-color: #F38630;    
+    border-radius: 10px;
+    background-color: #f38530e1;
+    text-align: center;    
+}
+label {
+    font-size: 35px;
+    color: #69d2e7;
 }
 .busqueda-container p { 
     /* grid-area: p; */
-    grid-column: 1 / 7;
+    grid-column: 3 / 11;
     grid-row: 1 / 2;
     color: #E0E4CC;
     padding: 10px 10px 10px 10px;
-    font-size: 40px;
+    font-size: 50px;
 }
 .origen {
-    /* grid-area: origen; */
-    grid-column: 2 / 3;
+    margin-left: 40px;
+    grid-column: 1 / 5;
     grid-row: 2 / 4;
-    justify-content: center;
-    background-color: olive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .destino {
-    /* grid-area: destino; */
-    grid-column: 3 / 4;
+    margin-left: 40px;
+    grid-column: 5 / 9;
     grid-row: 2 / 4;
-    background-color: palevioletred;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .reservas {
-    /* grid-area: reservas; */
-    grid-column: 4 / 5;
-    grid-row: 2 / 4;
-    background-color: crimson;
-}
-label {
     margin-left: 30px;
+    grid-column: 9 / 13;
+    grid-row: 2 / 5;
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: repeat(3, 60px);
 }
-.busqueda-container input {
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
+.reservas input {
+    height: 30px;
+    width: 40px;
+    color: #69d2e7;
+}
+.busqueda-container input:not(.reservas,.button--busqueda--rapida) {    
     justify-self: center;
+    color: lightslategray;
     background-color: #E0E4CC;
     margin: 10px 20px 10px;
     border-radius: 5px;
     border: none;
     padding: 5px;    
 }
+.busqueda-container input::placeholder {
+    color: #64c5d9;
+    font-size: 20px;
+}
 .button--busqueda--rapida {
     /* grid-area: buscar; */
-    background-color: #69d2e7;  
-    color: #E0E4CC;
-    font-size: 25px;
-    width: 100px;
-    margin: 10px 30px 15px 250px;
+    grid-column: 6 / 8;
+    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E0E4CC;
+    color: #69d2e7;
+    font-size: 30px;
+    width: 170px;
+    height: 50px;
+    border: none;
     border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+}
+.button--busqueda--rapida:hover {
     cursor: pointer;
+    color: lightslategray;
+    background-color: #64c5d9;
+    transform: scale(1.1);
 }
 
 /* seccion destinos mas visitados */
@@ -220,7 +243,7 @@ label {
 }
 .section--destinos h2 {
     background-color: #E0E4CC;
-    color: #F38630;
+    color: #f38530e1;
     border-radius: 20px;
     margin: 0 0 25px 10px;
     padding: 0 10px;    
@@ -228,10 +251,10 @@ label {
     font-size: 45px;
 }
 .section--destinos h2 a {
-    color:#F38630;
+    color:#f38530e1;
 }
 .cards--destinos {
-    background-color: #F38630;
+    background-color: #f38530e1;
     border: 2px solid transparent;
     width: 570px;
     border-radius: 10px;
@@ -262,55 +285,59 @@ label {
     width: 170px;    
 }
 
+/* Section sugerencias-app-subs */
+
+.sugerencias-app-subs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 /* seccion APP */
 
 .app {
-    background-color: #F38630;
+    background-color: #f38530e1;
     border: 2px solid transparent;
     border-radius: 10px;
     margin: 20px auto;
     text-align: center;
-    width: 600px;
+    width: auto;
+    height: 500px;
+    display: flex;
 }
-.app--img {
-    display: inline-block;
-    margin: 20px 10px 20px 10px;
-    text-align: center;
-}
-.app--img img {    
-    background-color: none;
-    width: 150px;
+.app-img img {
+    width: 200px;
+    margin-top: 40px;
 }
 .app h3 {
     color: #E0E4CC;
-    font-size: 50px;
-    display: inline-block;
-    margin: 0 10px 30px 30px; 
+    font-size: 40px;    
 }
 .app p {
     color: #E0E4CC;
+    font-size: 20px;
     width: 500px;
-    display: inline-block;
+    margin: 20px;
 }
-.app--img--qr {
+.app-img-qr {
     background-color: #E0E4CC;
-    border-radius: 20%;
+    border-radius: 10%;
     width: 200px;
-    padding: 35px;
+    padding: 15px;
     margin: 20px;
 }
 
 /* seccion suscripciones */
 
 .subs {
-    background-color: #F38630;
-    height: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f38530e1;
     width: 600px;
     border-radius: 10px;
-    margin: 30px auto;
-    text-align: center;
+    margin: 20px auto;
+    text-align: center;    
 }
-.subs--texto h3 {
+.subs-texto h3 {
     text-align: center;
     color: #E0E4CC;
     font-size: 40px;
@@ -318,14 +345,15 @@ label {
 }
 .subs p {
     color: #E0E4CC;    
-    font-size: 30px;
+    margin: 20px;
+    font-size: 20px;
     text-align: center;
 }
-.subs--img {
+.subs-img {
     text-align: center;
 }
-.logo--subs {
-    width: 100px;
+.logo-subs {
+    width: 120px;
     margin: 20px;
 }
 .subs input {
@@ -343,21 +371,17 @@ label {
 /* FOOTER */
 
 footer {
-    background-color: #F38630;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "mapa mapa . redes redes redes"
+    ". . geaweb geaweb . . "
+    ;
+    background-color: #f38530e1;
     border-radius: 10px;
     height: auto;
     margin: 0 auto;
-}
-.div--redes { 
-    height: 90px;   
-    text-align: center;
-    margin: 20px;
-}
-.logo--redes {
-    background-color: none;
-    width: 70px;
-    display: inline-block;
-    margin: 10px 40px;
 }
 footer h4 {
     color: #E0E4CC;
@@ -365,6 +389,7 @@ footer h4 {
     margin: 10px 0;
 }
 .div--mapa {
+    grid-area: mapa;
     margin: 0 auto;
     width: 450px;
     text-align: center;
@@ -375,6 +400,7 @@ footer h4 {
     cursor: pointer;
 }
 .div--geaweb{
+    grid-area: geaweb;
     text-align: center;    
 }
 .logo--geaweb {
@@ -382,23 +408,34 @@ footer h4 {
     border-radius: 50%;
     margin: 20px auto 10px auto;
     padding: 5px;
-    width: 70px;
-    display: block;    
+    width: 70px;  
 }
 footer p {
     background-color: #E0E4CC;
-    color: #F38630;
+    color: #f38530e1;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    display: inline-block;
     padding: 5px 5px;
     font-size: 22px;
+}
+.div--redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: end;
+    height: 90px;   
+    text-align: center;
+    margin: 20px;
+}
+.logo--redes {
+    background-color: none;
+    width: 70px;
+    margin: 10px 40px;
 }
 
 /* Inicio sesion.html */
 
 .inicio--sesion {
-    background-color: #F38630;
+    background-color: #f38530e1;
     width: 40vw;
     height: 380px;
     border-radius: 10px;
@@ -437,7 +474,7 @@ footer p {
 /* crearCuenta.html */
 
 .section--crear--cuenta {
-    background-color: #F38630;
+    background-color: #f38530e1;
     width: 700px;
     text-align: center;
     border-radius: 10px;
@@ -448,7 +485,7 @@ footer p {
     font-size: 65px;
 }
 .form--cuenta--nueva {
-    background-color: #F38630;
+    background-color: #f38530e1;
     margin: 20px auto;
     padding-top: 5px;
     width: 420px;
@@ -479,7 +516,7 @@ footer p {
 /* Nosotros.html */
 
 .somos--titulo {
-    background-color: #F38630;
+    background-color: #f38530e1;
     text-align: center;
     border-radius: 10px;
     margin: 30px auto;
@@ -506,7 +543,7 @@ footer p {
     width: 400px;
 }
 .div--nosotros--texto {
-    background-color: #F38630;
+    background-color: #f38530e1;
     border-radius: 10px;
     height: 300px;
     margin: 30px 35px;

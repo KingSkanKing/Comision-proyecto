@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,19 +7,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Kanit:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../proyecto/css/viaje.css" />
+  <link rel="stylesheet" href="./css/viaje.css" />
   <link rel="shortcut icon" href="./assets/favicon_io/favicon.ico">
   <!--favicon-->
   <title>Viajes y Turismo</title>
 </head>
-
 <body>
   <div class="body">
     <header class="header-container">
       <!-- <img class="header--montaña" src="./assets/imgHeaderMontaña.jpg" alt="escalar una montaña"> -->
+      <section class="nav--fixed"><!--nav--fixed-->
+        <nav>
+          <ul class="nav--fixed--ul">
+            <!--img de iconos vinculados (a enlaces futuros)-->
+            <li><a href=""><img src="./assets/mundoLogo.png" alt="Inicio"></img>Inicio</a></li>
+            <li><a href=""><img src="./assets/nav fixed/hotel.png" alt="Hoteles"></img>Hoteles</a></li>
+            <li><a href=""><img src="./assets/nav fixed/avion.png" alt="Vuelos"></img>Vuelos</a></li>
+            <li><a href=""><img src="./assets/nav fixed/valija.png" alt="Paquetes"></img>Paquetes</a></li>
+            <li><a href=""><img src="./assets/nav fixed/fuego.png" alt="Ofertas"></img>Ofertas</a></li>
+            <li><a href=""><img src="./assets/nav fixed/coche.png" alt="Autos"></img>Autos</a></li>
+            <li><a href=""><img src="./assets/nav fixed/boleto.png" alt="Actividades"></img>Actividades</a>
+            </li>
+            <li><a href=""><img src="./assets/nav fixed/caja-de-regalo.png"
+                  alt="GiftTravel"></img>GiftTravel</a></li>
+          </ul>
+        </nav>
+      </section>
       <div class="div--header">
         <!--div con logo y h1 vinculados-->
-        <img class="logo--globo" src="../proyecto/assets/mundologo.png" alt="Logo Viajes y Turismo">
+        <img class="logo--globo" src="./assets/mundologo.png" alt="Logo Viajes y Turismo">
         <h1 class="titulo--header">Viajes y Turismo</h1>
       </div>
       <div class="div--nav">
@@ -28,54 +43,33 @@
         <nav class="nav--header">
           <!--navegacion al lado de logo y h1-->
           <ul>
-            <li><a href="../proyecto/pages/destinos.html"><img class="nav--header--img"
-                  src="../proyecto/assets/destinos.png" alt="Destinos"></img>Destinos</a></li>
-            <li><a href="../proyecto/pages/inicioSesion.html"><img class="nav--header--img"
-                  src="../proyecto/assets/iniciarSesion.png" alt="Iniciar Sesión"></img>Inicia Sesión</a></li>
-            <li><a href="../proyecto/pages/crearCuenta.html"><img class="nav--header--img"
-                  src="../proyecto/assets/crearCuenta.png" alt="Crear cuenta"></img>Crear cuenta</a></li>
-            <li><a href="../proyecto/pages/nosotros.html"><img class="nav--header--img"
-                  src="../proyecto/assets/mundoLogo.png" alt="Nosotros"></img>Nosotros</a></li>
+            <li><a href="./pages/destinos.html"><img class="nav--header--img"
+                  src="./assets/destinos.png" alt="Destinos"></img>Destinos</a></li>
+            <li><a href="./pages/inicioSesion.html"><img class="nav--header--img"
+                  src="./assets/iniciarSesion.png" alt="Iniciar Sesión"></img>Inicia Sesión</a></li>
+            <li><a href="./pages/crearCuenta.html"><img class="nav--header--img"
+                  src="./assets/crearCuenta.png" alt="Crear cuenta"></img>Crear cuenta</a></li>
+            <li><a href="./pages/nosotros.html"><img class="nav--header--img"
+                  src="./assets/mundoLogo.png" alt="Nosotros"></img>Nosotros</a></li>
           </ul>
         </nav>
       </div>
-      <section class="nav--fixed">
-        <!--nav--fixed-->
-        <nav>
-          <ul class="nav--fixed--ul">
-            <!--img de iconos vinculados (a enlaces futuros)-->
-            <li><a href=""><img src="../proyecto/assets/mundoLogo.png" alt="Inicio"></img>Inicio</a></li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/hotel.png" alt="Hoteles"></img>Hoteles</a></li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/avion.png" alt="Vuelos"></img>Vuelos</a></li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/valija.png" alt="Paquetes"></img>Paquetes</a></li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/fuego.png" alt="Ofertas"></img>Ofertas</a></li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/coche.png" alt="Autos"></img>Autos</a></li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/boleto.png" alt="Actividades"></img>Actividades</a>
-            </li>
-            <li><a href=""><img src="../proyecto/assets/nav fixed/caja-de-regalo.png"
-                  alt="GiftTravel"></img>GiftTravel</a></li>
-          </ul>
-        </nav>
-      </section>
     </header>
     <main>
-      <section><!--cuadro de busqueda rapida-->
+      <section class="busqueda-grid"><!--cuadro de busqueda rapida-->
         <div class="busqueda-container">
           <p>¡¡ Comienza tu viaje soñado !!</p>
-          <div class="origen">
-            <!--origen-->
+          <div class="origen"><!--origen-->
+            <label for="salida"> Fecha de salida </label>
             <input type="search" name="origen" placeholder="Origen">
-            <label for="salida"> Fecha de salida: </label>
             <input type="date" name="fecha">
           </div>
-          <div class="destino">
-            <!--destino-->
+          <div class="destino"><!--destino-->
+            <label for="llegada">Fecha de llegada</label>
             <input type="search" name="origen" placeholder="Destino">
-            <label for="llegada">Fecha de llegada:</label>
             <input type="date" name="fecha">
           </div>
-          <div class="reservas">
-            <!--reservas-->
+          <div class="reservas"><!--reservas-->
             <label for="pasajeros">Pasajeros</label>
             <input type="number" min="1" max="10" placeholder="1">
             <label for="menores">Menores</label>
@@ -84,138 +78,116 @@
             <input type="number" min="1" max="3" placeholder="1">
           </div>
           <input class="button--busqueda--rapida" type="submit" value="Buscar">
+
         </div>
       </section>
-      <section class="section--destinos">
-        <!--sugerencias destinos mas visitados-->
+      <section class="section--destinos"><!--sugerencias destinos mas visitados-->
         <div>
-          <a href="../proyecto/pages/destinos.html"><img class="pin" src="../proyecto/assets/pinLocation.png"
-              alt="pin ubicacion">
-            <!--logo pin ubicacion-->
-          </a>
+          <a href="./pages/destinos.html"><img class="pin" src="./assets/pinLocation.png" alt="pin ubicacion"></a><!--logo pin ubicacion-->
         </div>
-        <h2><a href="../proyecto/pages/destinos.html">Destinos mas visitados</a></h2>
-        <section class="div--destinos">
-          <!--futuro carrousel de cards con imagen y descripciones-->
-          <div class="cards--destinos">
-            <!--Madrid-->
-            <a href=""><img class="fotoDestinos" src="../proyecto/assets/jpg/madrid.jpg" alt="Madrid"></a>
-            <!--cada img es un enlace-->
+        <h2><a href=".pages/destinos.html">Destinos mas visitados</a></h2>
+        <section class="div--destinos"><!--futuro carrousel de cards con imagen y descripciones-->
+          <div class="cards--destinos"><!--Madrid-->
+            <a href=".pages/destinos.html"><img class="fotoDestinos" src="./assets/jpg/madrid.jpg" alt="Madrid"></a><!--cada img es un enlace-->
             <div class="parrafo--destinos">
               <p>Madrid es Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusamus odit repellendus enim
                 dolore perferendis incidunt maiores, vitae officia explicabo totam voluptas molestias voluptatum illum
                 culpa. Nesciunt, similique! Doloremque, ducimus?</p></a>
             </div>
-            <a href="../proyecto/pages/destinos.html">
+            <a href=".pages/destinos.html">
               <p class="button--quieroViajar">¡¡Quiero viajar!!</p>
             </a>
           </div>
-          <div class="cards--destinos">
-            <!--Paris-->
-            <a href=""><img class="fotoDestinos" src="../proyecto/assets/jpg/paris.jpg" alt="Paris"></a>
-            <!--cada img es un enlace-->
+          <div class="cards--destinos"><!--Paris-->
+            <a href="./pages/destinos.html"><img class="fotoDestinos" src="./assets/jpg/paris.jpg" alt="Paris"></a><!--cada img es un enlace-->
             <div class="parrafo--destinos">
               <p>Paris es Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusamus odit repellendus enim
                 dolore perferendis incidunt maiores, vitae officia explicabo totam voluptas molestias voluptatum illum
-                culpa. Nesciunt, similique! Doloremque, ducimus?</p></a>
+                culpa. Nesciunt, similique! Doloremque, ducimus?</p>
             </div>
-            <a href="../proyecto/pages/destinos.html">
+            <a href="./pages/destinos.html">
               <p class="button--quieroViajar">¡¡Quiero viajar!!</p>
             </a>
           </div>
-          <div class="cards--destinos">
-            <!--Buenos Aires-->
-            <img class="fotoDestinos" src="../proyecto/assets/jpg/buenosAires.jpg" alt="Buenos Aires">
-            <!--cada img y p es un enlace-->
+          <div class="cards--destinos"><!--Buenos Aires-->
+            <a href="./pages/destinos.html"><img class="fotoDestinos" src="./assets/jpg/buenosAires.jpg" alt="Buenos Aires"></a><!--cada img y p es un enlace-->
             <div class="parrafo--destinos">
-              <a href="">
                 <p>Buenos Aires es Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusamus odit
                   repellendus
                   enim dolore perferendis incidunt maiores, vitae officia explicabo totam voluptas molestias voluptatum
                   illum culpa. Nesciunt, similique! Doloremque, ducimus?</p>
-              </a>
             </div>
-            <a href="../proyecto/pages/destinos.html">
+            <a href="./pages/destinos.html">
               <p class="button--quieroViajar">¡¡Quiero viajar!!</p>
             </a>
           </div>
-          <div class="cards--destinos">
-            <!--Calafate-->
-            <img class="fotoDestinos" src="../proyecto/assets/jpg/calafate.jpg" alt="Calafate">
-            <!--cada img y p es un enlace-->
+          <div class="cards--destinos"><!--Calafate-->
+            <a href="./pages/destinos.html"><img class="fotoDestinos" src="./assets/jpg/calafate.jpg" alt="Calafate"></a><!--cada img y p es un enlace-->
             <div class="parrafo--destinos">
-              <a href="">
                 <p>Calafate es Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusamus odit repellendus
                   enim dolore perferendis incidunt maiores, vitae officia explicabo totam voluptas molestias voluptatum
                   illum culpa. Nesciunt, similique! Doloremque, ducimus?</p>
-              </a>
             </div>
-            <a href="../proyecto/pages/destinos.html">
+            <a href="./pages/destinos.html">
               <p class="button--quieroViajar">¡¡Quiero viajar!!</p>
             </a>
           </div>
         </section>
       </section>
-      <section class="app">
-        <!--descarga nuestra APP-->
-        <div class="app--img">
-          <img class="app--img--phone" src="../proyecto/assets/app/smartphone.png" alt="Smartphone">
-          <!--icono smartphone-->
-        </div>
-        <div class="app--text">
-          <h3>Descarga nuestra APP</h3>
-          <p>Descarga nuestra APP Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae numquam expedita!
-            Pariatur laboriosam vitae iste ipsa alias totam, dolore quaerat hic facere sequi, consequatur laudantium
-            autem
-            atque, at impedit!
-            Porro vitae et ut molestiae. Eum dolorem quasi tenetur, natus vitae fugiat ex quibusdam maxime similique
-            pariatur, perferendis error ducimus delectus adipisci magni, quo esse nostrum! Repudiandae odio eligendi
-            deleniti!
-            Eveniet nulla voluptate soluta at, mollitia facilis accusamus nesciunt consequatur officia perspiciatis!
-            Laboriosam incidunt perspiciatis maxime, placeat ipsam vitae. Sed soluta minima nihil a voluptatum
-            cupiditate,
-            veritatis facilis rem distinctio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, sed
-            mollitia? Animi quisquam labore cupiditate adipisci, vel quam nisi nobis odit quas neque. Corrupti
-            asperiores
-            illo libero totam fuga itaque.</p>
-          <img class="app--img--qr" src="../proyecto/assets/app/qr-code.png" alt="codigo QR">
-          <!--codigo QR-->
-        </div>
-      </section>
-      <section class="subs">
-        <!--suscripciones por mail-->
-        <div class="subs--img">
-          <img class="logo--subs" src="../proyecto/assets/email.png" alt="Email">
-          <!--icono sobre email-->
-        </div>
-        <div class="subs--texto">
-          <h3>¡¡Suscríbete... </h3>
-          <p>...y te enviaremos las mejores ofertas!!</p>
-          <input class="button--busqueda" type="button" name="suscribirse" value="Suscribirse">
-        </div>
+      <section class="sugerencias-app-subs">
+        <section class="app"><!--descarga nuestra APP-->
+          <div class="app-img">
+            <img src="./assets/app/smartphone.png" alt="Smartphone"><!--icono smartphone-->
+          </div>
+          <div class="app-text">
+            <h3>Descarga nuestra APP</h3>
+            <p>Descarga nuestra APP Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae numquam
+              expedita!
+              Pariatur laboriosam vitae iste ipsa alias totam, dolore quaerat hic facere sequi, consequatur laudantium
+              autem
+              atque, at impedit!
+            </p>
+            <img class="app-img-qr" src="./assets/app/qr-code.png" alt="codigo QR"><!--codigo QR-->
+          </div>
+        </section>
+        <section class="subs"><!--suscripciones por mail-->
+          <div class="subs-img">
+            <img class="logo-subs" src="./assets/email.png" alt="Email"><!--icono sobre email-->
+          </div>
+          <div class="subs-texto">
+            <h3> ¡¡Suscríbete!! </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae numquam
+              expedita!
+              Pariatur laboriosam vitae iste ipsa alias totam, dolore quaerat hic facere sequi, consequatur laudantium
+              autem
+              atque, at impedit!
+            </p>
+            <input class="button-busqueda" type="button" name="suscribirse" value="Suscribirse">
+          </div>
+        </section>
       </section>
     </main>
     <footer>
-      <div class="div--redes">
-        <!--redes sociales con vinculos-->
-        <a href="https://www.instagram.com" target="_blank"><img class="logo--redes"
-            src="../proyecto/assets/instagram.png" alt="instagram"></a>
-        <a href="https://www.facebook.com" target="_blank"><img class="logo--redes"
-            src="../proyecto/assets/facebook.png" alt="facebook"></a>
-        <a href="https://www.twitter.com" target="_blank"><img class="logo--redes" src="../proyecto/assets/twitter.png"
-            alt="twitter"></a>
-        <a href="https://www.youtube.com" target="_blank"><img class="logo--redes" src="../proyecto/assets/youtube.png"
-            alt="youtube"></a>
-      </div>
       <div class="div--mapa">
         <h4>Mapa del sitio</h4>
         <!--imagen de arbol de flujo-->
-        <img class="logo--mapa" src="../proyecto/assets/mapasitio.png" alt="Mapa del sitio">
+        <img class="logo--mapa" src="./assets/mapasitio.png" alt="Mapa del sitio">
       </div>
       <div class="div--geaweb">
         <!--icono "Geaweb"-->
-        <img class="logo--geaweb" src="../proyecto/assets/geaweb.png" alt="Geaweb">
+        <img class="logo--geaweb" src="./assets/geaweb.png" alt="Geaweb">
         <p>Copyright 2022 - Desarrollado por Geaweb - Derechos reservados</p>
+      </div>
+      <div class="div--redes">
+        <!--redes sociales con vinculos-->
+        <a href="https://www.instagram.com" target="_blank"><img class="logo--redes"
+            src="./assets/instagram.png" alt="instagram"></a>
+        <a href="https://www.facebook.com" target="_blank"><img class="logo--redes"
+            src="./assets/facebook.png" alt="facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img class="logo--redes" src="./assets/twitter.png"
+            alt="twitter"></a>
+        <a href="https://www.youtube.com" target="_blank"><img class="logo--redes" src="./assets/youtube.png"
+            alt="youtube"></a>
       </div>
     </footer>
   </div>
