@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FUTURO BOOTSTRAP -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Kanit:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/viaje.css" />
   <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico">
-  <!--favicon-->
   <title>Inicio de sesión</title>
 </head>
-
 <body>
   <div class="body">
     <header class="header-container">
@@ -60,57 +60,41 @@
     <main>
       <section class="inicio--sesion">
         <h2>Iniciar sesión</h2>
-        <div class="div--sesion">
-          <ul class="lista--inicio--sesion">
-            <!--facebook-->
-            <li><img src="../assets/facebook.png" alt="facebook"><input type="button"
-                value="Inicia sesión con Facebook"></li>
-            <!--google-->
-            <li><img src="../assets/google.png" alt="google"><input type="button" value="Inicia sesión con Google"></li>
-            <!--email-->
-            <li><img src="../assets/emailSesion.png" alt="email"><input type="button"
-                value="Inicia sesión con tu Email"></li>
-          </ul>
-        </div>
+        <ul class="div--sesion">            
+          <li><img src="../assets/facebook.png" alt="facebook"><input type="button" value="Inicia sesión con Facebook"></li><!--facebook-->
+          <li><img src="../assets/google.png" alt="google"><input type="button" value="Inicia sesión con Google"></li><!--google-->
+          <li><img src="../assets/emailSesion.png" alt="email"><input type="button" value="Inicia sesión con tu Email"></li><!--email-->
+        </ul>
         <h3>Crear una <a href="./crearCuenta.html">cuenta nueva</a></h3>
       </section>
-      <section class="app">
-        <!--descarga nuestra APP-->
-        <div class="app--img">
-          <img class="app--img--phone" src="../assets/app/smartphone.png" alt="Smartphone">
-          <!--icono smartphone-->
-        </div>
-        <div class="app--text">
-          <h3>Descarga nuestra APP</h3>
-          <p>Descarga nuestra APP Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae numquam expedita!
-            Pariatur laboriosam vitae iste ipsa alias totam, dolore quaerat hic facere sequi, consequatur laudantium
-            autem
-            atque, at impedit!
-            Porro vitae et ut molestiae. Eum dolorem quasi tenetur, natus vitae fugiat ex quibusdam maxime similique
-            pariatur, perferendis error ducimus delectus adipisci magni, quo esse nostrum! Repudiandae odio eligendi
-            deleniti!
-            Eveniet nulla voluptate soluta at, mollitia facilis accusamus nesciunt consequatur officia perspiciatis!
-            Laboriosam incidunt perspiciatis maxime, placeat ipsam vitae. Sed soluta minima nihil a voluptatum
-            cupiditate,
-            veritatis facilis rem distinctio? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, sed
-            mollitia? Animi quisquam labore cupiditate adipisci, vel quam nisi nobis odit quas neque. Corrupti
-            asperiores
-            illo libero totam fuga itaque.</p>
-          <img class="app--img--qr" src="../assets/app/qr-code.png" alt="codigo QR">
-          <!--codigo QR-->
-        </div>
-      </section>
-      <section class="subs">
-        <!--suscripciones por mail-->
-        <div class="subs--img">
-          <img class="logo--subs" src="../assets/email.png" alt="Email">
-          <!--icono sobre email-->
-        </div>
-        <div class="subs--texto">
-          <h3>¡¡Suscríbete... </h3>
-          <p>...y te enviaremos las mejores ofertas!!</p>
-          <input class="button--busqueda" type="button" name="suscribirse" value="Suscribirse">
-        </div>
+      <section class="sugerencias-app-subs">
+        <section class="app"><!--descarga nuestra APP-->
+          <img class="app-phone" src="../assets/app/smartphone.png" alt="Smartphone"><!--icono smartphone-->
+          <div class="app-text">
+            <h3>Descarga nuestra APP</h3>
+            <p>Descarga nuestra APP Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae numquam
+              expedita!
+              Pariatur laboriosam vitae iste ipsa alias totam, dolore quaerat hic facere sequi, consequatur laudantium
+              autem
+              atque, at impedit!</p>
+              <img class="app-qr" src="../assets/app/qr-code.png" alt="codigo QR"><!--codigo QR-->
+          </div>
+        </section>
+        <section class="subs"><!--suscripciones por mail-->
+          <div class="subs-img">
+            <img class="logo-subs" src="../assets/email.png" alt="Email"><!--icono sobre email-->
+          </div>
+          <div class="subs-texto">
+            <h3> ¡¡Suscríbete!! </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae numquam
+              expedita!
+              Pariatur laboriosam vitae iste ipsa alias totam, dolore quaerat hic facere sequi, consequatur laudantium
+              autem
+              atque, at impedit!
+            </p>
+            <input class="button-busqueda" type="button" name="suscribirse" value="Suscribirse">
+          </div>
+        </section>
       </section>
     </main>
     <footer>
@@ -137,6 +121,8 @@
       </div>
     </footer>
   </div>
+  <!-- FUTURO BOOTSTRAP -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
 </body>
-
 </html>

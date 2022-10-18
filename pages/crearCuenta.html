@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FUTURO BOOTSTRAP -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Kanit:wght@300&display=swap" rel="stylesheet">
@@ -13,7 +14,6 @@
   <!--favicon-->
   <title>Crear cuenta</title>
 </head>
-
 <body>
   <div class="body">
     <header class="header-container">
@@ -59,29 +59,25 @@
       </section>
     </header>
     <main>
-      <section class="section--crear--cuenta">
-        <h2>Crea tu cuenta</h2>
-      </section>
-      <div class="form--cuenta--nueva">
-        <form>
+      <section class="section-crear-cuenta">
+        <h2>Crea tu cuenta</h2>      
+        <form class="form-datos">
           <input type="text" placeholder="Nombre completo">
           <input type="tel" placeholder="Número de teléfono">
           <input type="email" placeholder="Correo electrónico">
           <input type="text" placeholder="Nombre de usuario">
           <input type="password" placeholder="Contraseña">
-          <fieldset name="fechadenacimiento">
-            <legend>Fecha de nacimiento</legend>
-            <input type="date" min="01/01/1920" max="31/12/2004">
-          </fieldset>
-          <fieldset name="sexo">
-            <legend>Sexo</legend>
-            <input type="radio" name="sexo">Masculino
-            <input type="radio" name="sexo">Femenino
-            <input type="radio" name="sexo">Personalizado
-          </fieldset>
+          <label>Fecha de nacimiento</label>
+          <input type="date" min="01/01/1920" max="31/12/2004">
+          <label>Sexo</label>
         </form>
-        <input class="input--cuenta--nueva" type="submit" name="Resgitarse" value="Registrarse">
-      </div>
+        <form class="form-sexo">        
+          <input type="radio" name="sexo">Masculino
+          <input type="radio" name="sexo">Femenino
+          <input type="radio" name="sexo">Personalizado
+        </form>
+        <input class="input-cuenta-nueva" type="submit" name="Resgitarse" value="Crear cuenta">
+      </section>
     </main>
     <footer>
       <div class="div--redes">
@@ -107,6 +103,8 @@
       </div>
     </footer>
   </div>
+  <!-- FUTURO BOOTSTRAP -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
 </body>
-
 </html>
