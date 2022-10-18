@@ -22,6 +22,7 @@ a {
 input:focus {
     box-shadow: 10px 5px 20px 1px#69d2e7;
     border-radius: 5px;
+    border: none;
 }
 input::placeholder {
     color: #64c5d9;
@@ -319,6 +320,7 @@ label {
 .button--quieroViajar {
     background-color: #69d2e7;
     color: #E0E4CC;
+    text-align: center;
     border-radius: 10px;
     font-size: 22px;
     padding: 12px 12px;
@@ -351,6 +353,7 @@ label {
     margin: 20px auto;
     text-align: center;
     width: auto;
+    height: 470px;
     display: flex;
     grid-template-columns: 200px 400px;
 
@@ -387,6 +390,7 @@ label {
     flex-direction: column;
     background-color: #f38530e1;
     width: 600px;
+    height: 470px;
     border-radius: 10px;
     margin: 20px auto;
     text-align: center;    
@@ -414,7 +418,8 @@ label {
     background-color: #69d2e7;
     border: none;  
     width: 200px;
-    font-size: 25px;
+    height: 50px;
+    font-size: 35px;
     color: #E0E4CC;
     border-radius: 5px;
     text-align: center;
@@ -454,7 +459,8 @@ footer h4 {
 }
 .div--geaweb{
     grid-area: geaweb;
-    text-align: center;    
+    text-align: center;
+    width: 750px;   
 }
 .logo--geaweb {
     background-color: #E0E4CC;
@@ -466,8 +472,7 @@ footer h4 {
 footer p {
     background-color: #E0E4CC;
     color: #f38530e1;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     padding: 5px 5px;
     font-size: 22px;
 }
@@ -610,11 +615,11 @@ footer p {
     background-color: none;
     margin: 15px 0;
     width: 150px;
-    animation-name: bounce-in-top;
-    -webkit-animation: bounce-in-top 1.1s both;
-            animation: bounce-in-top 1.1s both;
+    animation-name: rebote;
+    -webkit-animation: rebote 1.1s both;
+            animation: rebote 1.1s both;
 }
-@keyframes bounce-in-top {
+@keyframes rebote {
     0% {
     -webkit-transform: translateY(-500px);
             transform: translateY(-500px);
@@ -675,7 +680,27 @@ footer p {
     padding: 5px;
     margin: 0 auto;
 }
-.div-nosotros-fotos:hover {
+.div-nosotros-fotos .foto1:hover {
+    -webkit-animation: kenburns-bottom 1s both;
+            animation: kenburns-bottom 1s both;
+}
+.div-nosotros-fotos .foto2:hover {
+    -webkit-animation: kenburns-bottom 1s both;
+            animation: kenburns-bottom 1s both;
+}
+.div-nosotros-fotos .foto3:hover {
+    -webkit-animation: kenburns-bottom 1s both;
+            animation: kenburns-bottom 1s both;
+}
+.div-nosotros-fotos .foto4:hover {
+    -webkit-animation: kenburns-bottom 1s both;
+            animation: kenburns-bottom 1s both;
+}
+.div-nosotros-fotos .foto5:hover {
+    -webkit-animation: kenburns-bottom 1s both;
+            animation: kenburns-bottom 1s both;
+}
+.div-nosotros-fotos .foto6:hover {
     -webkit-animation: kenburns-bottom 1s both;
             animation: kenburns-bottom 1s both;
 }
@@ -687,8 +712,8 @@ footer p {
             transform-origin: 50% 84%;
     }
     100% {
-    -webkit-transform: scale(1.05) translateY(15px);
-            transform: scale(1.05) translateY(15px);
+    -webkit-transform: scale(1.15) translateY(15px);
+            transform: scale(1.15) translateY(15px);
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
     }
@@ -718,112 +743,12 @@ footer p {
 
 /* TABLET RESPONSIVE */
 @media (max-width: 768px) {
-/* nav fixed al inicio de pagina */
-.nav--fixed {
-    grid-area: nav--fixed;
-    background-color: #f38530e1;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    position: fixed;
-    width: 100%;
-    height: 95px;  
-    text-align: center;
-}
-.nav--fixed--ul {
-    margin-top: 15px;
-    height: 80px;
-    display: flex;
-    justify-content: space-around;
-}
-.nav--fixed--ul img {
-    width: 45px;
-}
-.nav--fixed--ul li {
-    display: flex;
-    justify-content: center;
-}
-.nav--fixed a {
-    display: flex;
-    flex-direction: column;    
-    height: 80px;
-    align-items: center;
-    color: #E0E4CC;
-}
-/* header: img en fondo, con logo y titulo vinculados */
-
-.header-container{
-    background: url(../assets/headerMontaña.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 5px 5px 9px black;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 105px);
-    grid-template-areas: 
-    "nav--fixed nav--fixed"
-    "div--header div--nav"
-    "div--header div--nav"
-    "div--header div--nav";
-}
-.div--header {
-    grid-area: div--header;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-.logo--globo {    
-    background-color: none;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.titulo--header { 
-    color: #E0E4CC;
-    margin-left: 30px;
-    font-size: 60px;
-    background: none;
-    display: flex;
-    align-items: flex-end;
-}
-
-/* nav header 4 secciones vinculadas a cada .html */
-
-.div--nav {
-    grid-area: div--nav;
-    display: flex;
-    justify-content: end;
-    align-items: start;    
-}
-.nav--header a:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 1px #69d2e7;
-}
-.nav--header--img {    
-    width: 55px;
-    height: 55px;
-    margin-top: 5px;
-}
-.nav--header ul {
-    display: flex;
-    text-align: center;   
-}
-.nav--header a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
-    background-color: #f38530e1;
-    color: #E0E4CC;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin: 0px 30px;
-}    
-
-
+    .header-container {
+        display: flex;
+    }
+    .nav--fixed {
+        position: fixed;
+    }
 }
 
 /* MOBILE RESPONSIVE */
