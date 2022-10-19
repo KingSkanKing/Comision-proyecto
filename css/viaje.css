@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 input:focus {
-    box-shadow: 10px 5px 20px 1px#69d2e7;
+    box-shadow: 5px 5px 20px 1px#69d2e7;
     border-radius: 5px;
     border: none;
 }
@@ -278,9 +278,10 @@ label {
 }
 .div-destinos {
     display: grid;
-    grid-template-columns: repeat(8, 237px);
-    grid-template-rows: repeat(8, 150px);
-    justify-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
 }
 .cards-destinos {
     background-color: #f38530e1;
@@ -290,20 +291,20 @@ label {
 }
 .cards-destinos:first-child {
     grid-column: 2/5;
-    grid-row: 1/5;
+    grid-row: 1/3;
     
 }
 .cards-destinos:nth-child(2) {
     grid-column: 5/8;
-    grid-row: 1/4;
+    grid-row: 1/3;
 }
 .cards-destinos:nth-child(3) {
     grid-column: 2/5;
-    grid-row: 5/9;
+    grid-row: 3/5;
 }
 .cards-destinos:nth-child(4) {
     grid-column: 5/8;
-    grid-row: 5/9;
+    grid-row: 3/5;
 }
 .fotoDestinos {
     width: 535px;
@@ -335,7 +336,7 @@ label {
 
 /* Section sugerencias-app-subs */
 
-.sugerencias-app-subs {
+.sugerencias {
     display: grid;
     grid-template-columns: 700px 600px;
     grid-template-rows: repeat(2, 250px);
@@ -431,34 +432,33 @@ label {
 footer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 250px;
     grid-template-areas: 
-    "mapa mapa . redes redes redes"
-    ". . geaweb geaweb . . "
-    ;
+    "mapa mapa geaweb geaweb redes redes";
     background-color: #f38530e1;
     border-radius: 10px;
-    height: auto;
+    height: 250px;
     margin: 0 auto;
 }
 footer h4 {
     color: #E0E4CC;
-    font-size: 40px;   
+    font-size: 30px;   
     margin: 10px 0;
 }
 .div--mapa {
     grid-area: mapa;
-    margin: 0 auto;
+    margin: 40px auto;
     width: 450px;
     text-align: center;
 }
 .logo--mapa {
     background-color: none;
-    width: 100px;
+    width: 80px;
     cursor: pointer;
 }
 .div--geaweb{
     grid-area: geaweb;
+    align-self: end;
     text-align: center;
     width: 750px;   
 }
@@ -486,7 +486,7 @@ footer p {
 }
 .logo--redes {
     background-color: none;
-    width: 70px;
+    width: 50px;
     margin: 10px 40px;
 }
 
@@ -745,10 +745,88 @@ footer p {
 @media (max-width: 768px) {
     .header-container {
         display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: center;
+    }
+    .logo--globo {
+        width: 100px;
+        height: 100px;
     }
     .nav--fixed {
-        position: fixed;
+        display: none;
     }
+    .div--header {
+        display: flex;
+        height: 150px;
+    }
+    .div--nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;   
+    }
+    .busqueda-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .reservas {
+        justify-content: center;
+    }
+    .destinos {
+        display: flex;
+        flex-direction: column;
+    }
+    .button--busqueda--rapida {
+        margin: 10px 0 20px;
+    }
+    .div-destinos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards-destinos {
+        margin: 10px;
+        height: 520px;
+    }
+    .sugerencias {
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: repeat(3, 33.33%);
+    }
+    .div--mapa { 
+        grid-column: 1/2;
+        grid-row: 1/3;
+        width: auto;
+        margin: 0;
+    }
+    .div--geaweb {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        width: 100vw;
+    }
+    .div--redes {
+        grid-column: 3/4;
+        grid-row: 1/2;        
+    }
+    .logo--redes {
+        margin: 10px;
+    }
+    
+
+
+
+
+
+
+
+
+
+
 }
 
 /* MOBILE RESPONSIVE */
