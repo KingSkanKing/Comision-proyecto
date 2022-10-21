@@ -27,6 +27,7 @@ input:focus {
 input::placeholder {
     color: #64c5d9;
 }
+
 /* nav fixed al inicio de pagina */
 
 .nav--fixed {
@@ -59,14 +60,11 @@ input::placeholder {
     align-items: center;
     color: #E0E4CC;
 }
-/* .nav--fixed a:hover {
-    
-} */
 
 /* header: img en fondo, con logo y titulo vinculados */
 
 .header-container{
-    background: url(../assets/headerMontaña.jpg);
+    background-image: url(../assets/headerMontaña.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 5px 5px 9px black;
@@ -751,7 +749,7 @@ footer p {
     margin: 10px 20px;
 }
 
-/* TABLET RESPONSIVE */
+/* TABLET RESPONSIVE (solo en esta medida, medidas intermedias no funciona)*/
 @media (max-width: 768px) {
     .header-container {
         display: flex;
@@ -879,7 +877,7 @@ footer p {
     }
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE (solo en esta medida, medidas intermedias no funciona)*/
 @media (max-width: 576px) {
     .header-container {
         display: flex;
