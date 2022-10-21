@@ -64,7 +64,7 @@ input::placeholder {
 /* header: img en fondo, con logo y titulo vinculados */
 
 .header-container{
-    background-image: url(../assets/headerMontaña.jpg);
+    background-image: url(../assets/headerMontana.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 5px 5px 9px black;
