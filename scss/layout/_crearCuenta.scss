@@ -1,0 +1,38 @@
+.section-crear-cuenta {
+    background-color: $color-orange;
+    width: 700px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 80px auto;
+    h2 {
+        color: $color-white;
+        font-size: 65px;
+    }
+    .form-control {
+        background-color: $color-white;
+        font-weight: bold;
+        &::placeholder{
+            color: $color-blue;
+            font-size: 20px;
+        }
+    }
+    .form-check-label {
+        color: $color-blue;
+    }
+    .input-cuenta-nueva {
+        background-color: $color-blue;
+        color: $color-white;
+        font-size: 30px;
+        font-weight: bold;
+        border: none;
+        padding: 5px;
+        margin: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            background-color: $color-blue;
+            color: $color-gray;
+        }
+    }
+}

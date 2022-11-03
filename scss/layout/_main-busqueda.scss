@@ -1,0 +1,85 @@
+.busqueda-grid {
+    display: grid;
+    justify-content: center;
+    .busqueda-container {
+        margin: 40px 40px;
+        width: auto;
+        height: auto;        
+        display: grid;
+        grid-template-columns: repeat(12, 110px);
+        grid-template-rows: repeat(4, 90px);
+        color: $color-white;
+        font-weight: bold;
+        border-radius: 10px;
+        background-color: $color-orange;
+        text-align: center;
+        & input:not(.reservas,.button--busqueda--rapida) {    
+            justify-self: center;
+            color: $color-gray;
+            background-color: $color-white;
+            margin: 10px 20px 10px;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+        }
+        & input::placeholder {
+            color: #64c5d9;
+            font-size: 20px;
+            
+        }
+        p { 
+            grid-column: 3 / 11;
+            grid-row: 1 / 2;
+            color: $color-white;
+            padding: 10px 10px 10px 10px;
+            font-size: 50px;
+        }
+        label {
+            font-size: 35px;
+            color: $color-white;
+        }
+        .origen {
+            grid-column: 1 / 5;
+            grid-row: 2 / 4;
+            margin-left: 40px;
+            @include flex(column,space-around,none);
+        }
+        .destino {
+            @extend .origen;
+            grid-column: 5 / 9;
+            grid-row: 2 / 4;
+        }
+        .reservas {
+            margin-left: 30px;
+            grid-column: 9 / 13;
+            grid-row: 2 / 5;
+            display: grid;
+            grid-template-columns: repeat(2, 170px);
+            grid-template-rows: repeat(3, 60px);
+            input {
+                height: 30px;
+                width: 40px;
+                color: $color-blue;
+            }
+        }
+        .button--busqueda--rapida {
+            grid-column: 6 / 8;
+            grid-row: 4 / 5;
+            @include flex(column,start,center);
+            align-self: center;
+            justify-self: center;
+            background-color: $color-blue;
+            color: $color-white;
+            font-size: 30px;
+            width: 170px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;            
+            &:hover {
+                cursor: pointer;
+                color: $color-gray;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

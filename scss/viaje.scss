@@ -1,0 +1,19 @@
+@import "./base/reset";
+@import "./components/bootstrap";
+@import "./utilities/variable";
+@import "./utilities/mixins";
+
+@import "./layout/index";
+@import "./layout/header";
+@import "./layout/main-busqueda";
+@import "./layout/destinos";
+@import "./layout/sugerencias";
+@import "./layout/sugerencias-app";
+@import "./layout/sugerencias-subs";
+@import "./layout/footer";
+@import "./layout/inicioSesion";
+@import "./layout/crearCuenta";
+@import "./layout/nosotros";
+
+@import "./layout/media-tablet";
+@import "./layout/media-mobile";

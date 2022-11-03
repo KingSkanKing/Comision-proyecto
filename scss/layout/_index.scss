@@ -1,0 +1,16 @@
+.body {
+    width: 100%;    
+    background-image: linear-gradient(to top, #e0e4cc, #d6e3cb, #cae1cb, #bfe0cd, #b4ded1, #abddd3, #a2dbd6, #99d9da, #8ed7dc, #82d6df, #76d4e3, #69d2e7);
+    a {
+        text-decoration: none;
+    }
+    input:focus {
+        box-shadow: 5px 5px 20px 1px $color-blue;
+        border-radius: 5px;
+        border: none;
+    }
+    input::placeholder {
+        color: $color-blue;
+    }
+}
+

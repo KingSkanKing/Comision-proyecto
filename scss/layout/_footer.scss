@@ -1,0 +1,58 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 250px;
+    grid-template-areas: 
+    "mapa mapa geaweb geaweb redes redes";
+    background-color: $color-orange;
+    border-radius: 10px;
+    height: 250px;
+    margin: 20px auto 0;
+    .div--mapa {
+        grid-area: mapa;
+        margin: 40px auto;
+        width: 450px;
+        text-align: center;
+        h4 {
+            color: $color-white;
+            font-size: 30px;   
+            margin: 10px 0;
+        }
+        .logo--mapa {
+            background-color: none;
+            width: 80px;
+            cursor: pointer;
+        }
+    }
+    .div--geaweb{
+        grid-area: geaweb;
+        align-self: end;
+        text-align: center;
+        width: 750px;
+        .logo--geaweb {
+            background-color: $color-white;
+            border-radius: 50%;
+            margin: 20px auto 10px auto;
+            padding: 5px;
+            width: 70px;  
+        }
+        p {
+            background-color: $color-white;
+            color: $color-orange;
+            border-radius: 10px;
+            padding: 5px 5px;
+            font-size: 22px;
+        } 
+    }
+    .div--redes {
+        grid-area: redes;
+        @include flex(row,end,center);
+        height: 90px; 
+        margin: 20px;
+        .logo--redes {
+            background-color: none;
+            width: 50px;
+            margin: 10px 40px;
+        }
+    }
+} 

@@ -1,0 +1,129 @@
+@media (max-width: 768px) {
+    .header-container {
+        @include flex(column,center,none);
+        height: 400px;
+        .nav--fixed {
+            display: none;
+        }
+        .div--header {
+            display: flex;
+            height: 150px;
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        .div--nav {
+            @include flex(column,end,center);
+            height: 150px;   
+        }
+    }
+    .busqueda-grid {
+        @include flex(column,none,none);
+        .busqueda-container {
+            @include flex(column,none,none);
+            .origen, .destinos {
+                margin-left: 0px;
+            }
+            .reservas {
+                justify-content: center;
+            }
+            input {
+                align-self: center;
+                width: 50%;
+            }
+            .button--busqueda--rapida {
+                margin: 10px 0 20px;
+            }
+        }
+    }
+    .div-destinos {
+        @include flex(column,none,center);
+        .cards-destinos {
+            margin: 10px;
+            height: 540px;
+        }
+    }
+    .sugerencias {
+        display: flex;
+        flex-direction: column;
+    }
+    .subs {
+        width: 700px;
+        margin: 20px 34px;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: repeat(3, 33.33%);
+        .div--mapa { 
+            grid-column: 1/2;
+            grid-row: 1/3;
+            width: auto;
+            margin: 0;
+        }
+        .div--geaweb {
+            grid-column: 1/4;
+            grid-row: 3/4;
+            width: 100vw;
+        }
+        .div--redes {
+            grid-column: 3/4;
+            grid-row: 1/3;
+            .logo--redes {
+                margin: 10px;
+            }        
+        }
+    }    
+    .inicio--sesion {
+        display: flex;
+        flex-direction: column;
+        width: 91%;
+    }
+    .div-nosotros-fotos {
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(3, 200px);
+        margin: auto;
+        column-gap: 20px;
+        row-gap: 10px;
+        img {
+            background-color: none;
+            width: 350px;
+            height: 200px;
+        }
+        .foto1 {        
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .foto2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .foto3{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .foto4{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .foto5{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .foto6{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+    } 
+    .div-nosotros-texto {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        h2 {
+            font-size: 55px;        
+        }
+    }
+}

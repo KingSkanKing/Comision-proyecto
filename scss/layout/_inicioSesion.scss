@@ -1,0 +1,40 @@
+.inicio--sesion {
+    @include flex(column,none,center);
+    background-color: $color-orange;
+    width: 40vw;
+    height: 400px;
+    border-radius: 10px;
+    margin: 40px auto;
+    h2 {
+        color: $color-white;
+        font-size: 60px;
+        margin: 15px;
+    }
+    .div--sesion li {
+        @include flex(row,space-around,none);
+        img {
+            width: 50px;
+            margin: 10px;
+        }
+        input {
+            border: none;
+            background-color: $color-white;
+            width: 308px;
+            height: auto;
+            color: $color-blue;
+            font-size: 25px;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    }  
+    h3 {
+        margin: 10px;
+        color: $color-white;
+        font-size: 30px;
+        a:hover {
+            color: rgb(223, 190, 3);
+        }
+    }
+} 
