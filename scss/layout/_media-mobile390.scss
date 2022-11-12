@@ -1,36 +1,38 @@
-@media (max-width: 576px) {
+@media (max-width: 390px) {
     .header-container {
         @include flex(column,none,none);
         height: 390px;        
         .div-header{
             @include flex(column,none,center);
             img {
-                width: 290px;
-                height: 290px;
+                width: 15px;
+                height: 25px;
             }
             h1 {
-                font-size: 22px;
+                font-size: 15px;
             }
         }
-    }
-    .div--nav {
-        align-self: center;
-        .nav--header {
-            @include flex (row,start,start);
-            li{
-                margin: 5px;                
-                a {
-                    margin: 1px;
-                    img {
-                        width: 50px;
-                        height: 50px;
+        .div--nav {
+            align-self: center;
+            .nav--header {
+                @include flex (row,start,start);
+                li{
+                    margin: 5px;                
+                    a {
+                        margin: 1px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
                     }
                 }
             }
         }
-    }
+    }    
     .cards-destinos {
-        height: 900px;
+        width: 300px;
+        height: 300px;
+        .fotoDestinos
         .parrafo--destinos {
             margin: 0 30px;
             p {

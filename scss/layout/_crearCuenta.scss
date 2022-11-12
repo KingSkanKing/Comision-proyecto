@@ -8,6 +8,21 @@
         color: $color-white;
         font-size: 65px;
     }
+    .form-datos {
+        @include flex(column,center,center);
+        row-gap: 10px;
+        input {
+            background-color: $color-white;
+            border: none;
+            border-radius: 7px;
+            height: 40px;
+            width: 50%;
+            &::placeholder {
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+    }
     .form-control {
         background-color: $color-white;
         font-weight: bold;

@@ -1,0 +1,101 @@
+@media (max-width: 576px) {
+    .header-container {
+        @include flex(column,none,none);
+        height: 390px;        
+        .div-header{
+            @include flex(column,none,center);
+            img {
+                width: 290px;
+                height: 290px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+        .div--nav {
+            align-self: center;
+            .nav--header {
+                @include flex (row,start,start);
+                li{
+                    margin: 5px;                
+                    a {
+                        margin: 1px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+    .cards-destinos {
+        height: 900px;
+        .parrafo--destinos {
+            margin: 0 30px;
+            p {
+            font-size: 14px;
+            }
+        }
+    }
+    .app {
+        width: 91%;
+        height: 520px;
+        .app-phone {
+            width: 100px;
+            height: 105px;
+        }
+        h3 {        
+            width: 100%;
+        }
+        p{
+            width: 91%;
+        }
+        .app-qr {
+            
+            width: 150px;
+        }
+    }
+    .subs {
+        justify-self: center;
+        width: 88%;
+        height: 500px;
+        .logo-subs {
+            width: 100px;
+        }
+    }
+    
+    footer{
+        margin-top: 20px;
+        .div--redes {
+            display: grid;
+            grid-template-columns: repeat(2, 80px );
+            grid-template-rows: repeat(2, 70px);
+        }
+    }
+    
+    .inicio--sesion h2 {
+        font-size: 40px;
+    }
+    .div--sesion img {
+        width: 50px;
+        input {
+            height: 50px;
+        }
+    }
+    .section-crear-cuenta{
+        width: 100%;
+    }    
+    .nosotros-logo-globo {
+        width: 100px;
+    }
+    .somos-titulo {
+        width: 100%;
+        h1 {
+            font-size: 50px;
+        }
+    } 
+    .div-nosotros-fotos{
+        @include flex(column,none,center);
+    }
+}
