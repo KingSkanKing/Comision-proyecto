@@ -454,7 +454,8 @@ footer {
   margin: 80px auto; }
   .section-crear-cuenta h2 {
     color: #E0E4CC;
-    font-size: 65px; }
+    font-size: 65px;
+    margin-bottom: 10px; }
   .section-crear-cuenta .form-datos {
     display: flex;
     flex-direction: column;
@@ -470,14 +471,19 @@ footer {
       .section-crear-cuenta .form-datos input::placeholder {
         text-align: center;
         font-size: 20px; }
-  .section-crear-cuenta .form-control {
-    background-color: #E0E4CC;
-    font-weight: bold; }
-    .section-crear-cuenta .form-control::placeholder {
+    .section-crear-cuenta .form-datos label {
+      font-size: 30px;
+      color: #E0E4CC; }
+  .section-crear-cuenta .form-sexo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px; }
+    .section-crear-cuenta .form-sexo label {
+      font-size: 20px;
       color: #69d2e7;
-      font-size: 20px; }
-  .section-crear-cuenta .form-check-label {
-    color: #69d2e7; }
+      margin-left: 10px; }
   .section-crear-cuenta .input-cuenta-nueva {
     background-color: #69d2e7;
     color: #E0E4CC;
@@ -631,9 +637,6 @@ footer {
     flex-direction: column;
     justify-content: none;
     align-items: center; }
-    .div-destinos .cards-destinos {
-      margin: 10px;
-      height: 540px; }
   .sugerencias {
     display: flex;
     flex-direction: column; }
@@ -785,8 +788,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: none;
-    align-items: none;
-    height: 390px; }
+    align-items: center;
+    width: 100%; }
     .header-container .div-header {
       display: flex;
       flex-direction: column;
@@ -814,9 +817,11 @@ footer {
   .cards-destinos {
     width: 300px;
     height: 300px; }
-    .cards-destinos .fotoDestinos .parrafo--destinos {
+    .cards-destinos .fotoDestinos {
+      width: 300px; }
+    .cards-destinos .parrafo--destinos {
       margin: 0 30px; }
-      .cards-destinos .fotoDestinos .parrafo--destinos p {
+      .cards-destinos .parrafo--destinos p {
         font-size: 14px; }
   .app {
     width: 91%;

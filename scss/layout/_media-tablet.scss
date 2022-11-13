@@ -39,10 +39,6 @@
     }
     .div-destinos {
         @include flex(column,none,center);
-        .cards-destinos {
-            margin: 10px;
-            height: 540px;
-        }
     }
     .sugerencias {
         display: flex;
