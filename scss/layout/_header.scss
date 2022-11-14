@@ -17,9 +17,8 @@
         background-color: $color-orange;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        position: fixed;
         width: 100%;
-        height: 95px;  
+        height: 85px;
         text-align: center;
         ul { 
             @include flex(row,space-around,start);
