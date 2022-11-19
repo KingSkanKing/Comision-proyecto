@@ -1,25 +1,48 @@
 @media (max-width: 768px) {
     .header-container {
-        @include flex(column,center,none);
-        height: 400px;
-        .nav--fixed {
-            display: none;
-        }
+        @include flex(column,start,none);
+        background-size: cover;
+        width: 768px;
+        height: auto;
+        // .nav--fixed {
+        //     display: none;
+        // }
         .div--header {
-            display: flex;
-            height: 150px;
+            @include flex(column,center,end);
+            height: 250px;
             img {
                 width: 150px;
-                height: 150px;
+                height: 180px;
+                margin-right: 80px;
+            }
+            h1 {
+                font-size: 20px;
+                margin-right: 20px;
             }
         }
-        .div--nav {
-            @include flex(column,end,center);
-            height: 150px;   
+        nav {
+            background-color: transparent;
+            display: inline-block;            
+            position: absolute;
+            button {
+                background-color: $color-orange;
+            }
+            ul {
+                background-color: $color-orange;
+                border-radius: 10px;
+                li {
+                    margin-left: 5px;
+                }
+            }
         }
+        // .div--nav {
+        //     @include flex(column,end,center);
+        //     height: 150px;   
+        // }
     }
     .busqueda-grid {
         @include flex(column,none,none);
+        width: 768px;
         .busqueda-container {
             @include flex(column,none,none);
             .origen, .destinos {
@@ -37,35 +60,57 @@
             }
         }
     }
-    .div-destinos {
+    .destinos {
+        width: 768px;
+        .div-destinos {
         @include flex(column,none,center);
+        width: 768px;
+            .cards-destinos {
+                margin: 10px;
+                height: 560px;
+            }
+        }
     }
     .sugerencias {
-        display: flex;
-        flex-direction: column;
-    }
-    .subs {
-        width: 700px;
+        @include flex(column,center,center);
+        width: 768px;
+        .app {
+            width: auto;
+            justify-content: center;
+        }
+        .subs {
+        width: 600px;
+        height: 420px;
         margin: 20px 34px;
+        justify-content: center;
+        }
     }
     footer {
+        width: 768px;
         display: grid;
-        grid-template-columns: repeat(3, 33.33%);
-        grid-template-rows: repeat(3, 33.33%);
+        margin-left: 0;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
         .div--mapa { 
             grid-column: 1/2;
-            grid-row: 1/3;
+            grid-row: 1/2;
             width: auto;
             margin: 0;
         }
-        .div--geaweb {
-            grid-column: 1/4;
-            grid-row: 3/4;
-            width: 100vw;
+        .div--geaweb {            
+            grid-column: 1/3;
+            grid-row: 2/3;
+            img {
+                height: 65px;
+            }
+            p {
+                height: 40px;
+                width: 768px;
+            }
         }
         .div--redes {
-            grid-column: 3/4;
-            grid-row: 1/3;
+            grid-column: 2/3;
+            grid-row: 1/2;
             .logo--redes {
                 margin: 10px;
             }        

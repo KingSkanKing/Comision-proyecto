@@ -24,63 +24,50 @@
   background-size: cover;
   box-shadow: 5px 5px 9px black;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 105px);
-  grid-template-areas: "nav--fixed nav--fixed nav--fixed nav--fixed" "div--header div--header div--nav div--nav" "div--header div--header div--nav div--nav" "div--header div--header div--nav div--nav"; }
-  .header-container .nav--fixed {
-    grid-area: nav--fixed;
-    background-color: #f38530e1;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 100%;
-    height: 85px;
-    text-align: center; }
-    .header-container .nav--fixed ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: start;
-      margin-top: 15px;
-      height: 80px; }
-      .header-container .nav--fixed ul li {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: start; }
-        .header-container .nav--fixed ul li a {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          align-items: center;
-          height: 80px;
-          color: #E0E4CC; }
-          .header-container .nav--fixed ul li a img {
-            width: 45px; }
-  .header-container .div--header {
-    grid-area: div--header;
+  height: auto; }
+  .header-container nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .header-container .div--header img {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      background-color: none;
-      width: 200px;
-      height: 200px; }
-    .header-container .div--header h1 {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: end;
+    justify-content: end;
+    align-items: none;
+    background-color: #f38530e1;
+    height: 50px; }
+    .header-container nav img {
+      width: 40px; }
+    .header-container nav label {
+      margin-left: 10px;
+      font-size: 22px;
       color: #E0E4CC;
-      margin-left: 30px;
-      font-size: 60px;
-      animation-name: tracking-in-expandp;
-      animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+      cursor: pointer; }
+  .header-container .div--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; }
+    .header-container .div--header a {
+      display: flex;
+      flex-direction: column;
+      justify-content: none;
+      align-items: center; }
+      .header-container .div--header a img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+        width: 200px;
+        animation-name: tracking-in-expand;
+        animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+      .header-container .div--header a h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: end;
+        color: #E0E4CC;
+        font-size: 60px;
+        animation-name: tracking-in-expand;
+        animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
 
 @keyframes tracking-in-expand {
   0% {
@@ -90,36 +77,6 @@
     opacity: 0.6; }
   100% {
     opacity: 1; } }
-  .header-container .div--nav {
-    grid-area: div--nav;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: start; }
-    .header-container .div--nav ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: start;
-      text-align: center; }
-      .header-container .div--nav ul a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #f38530e1;
-        color: #E0E4CC;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        margin: 0px 30px; }
-        .header-container .div--nav ul a:hover {
-          transform: scale(1.1);
-          box-shadow: 3px 1px #69d2e7; }
-        .header-container .div--nav ul a img {
-          width: 55px;
-          height: 55px;
-          margin-top: 5px; }
 
 .busqueda-grid {
   display: grid;
@@ -221,7 +178,8 @@
     border-radius: 20px;
     margin: 0 0 25px 10px;
     padding: 0 10px;
-    font-size: 45px; }
+    font-size: 45px;
+    line-height: 150%; }
     .titulo-destinos h2 a {
       color: #f38530e1; }
 
@@ -236,7 +194,7 @@
   .div-destinos .cards-destinos {
     background-color: #f38530e1;
     width: 570px;
-    height: 550px;
+    height: 570px;
     border-radius: 10px; }
     .div-destinos .cards-destinos:first-child {
       grid-column: 1/2;
@@ -256,7 +214,7 @@
       margin: 17px 0px 0px 17px;
       border-radius: 10px; }
     .div-destinos .cards-destinos .parrafo--destinos {
-      margin: 0 30px 25px; }
+      margin: 10px 30px 25px; }
       .div-destinos .cards-destinos .parrafo--destinos p {
         font-size: 18px;
         color: #E0E4CC; }
@@ -277,7 +235,7 @@
 .sugerencias {
   display: grid;
   grid-template-columns: 700px 600px;
-  grid-template-rows: repeat(2, 225px);
+  grid-template-rows: repeat(2, 220px);
   justify-content: center;
   column-gap: 40px; }
 
@@ -297,20 +255,19 @@
     height: 210px;
     margin-top: 40px; }
   .app h3 {
-    color: #E0E4CC;
+    color: #69d2e7;
     font-size: 40px;
     margin-top: 10px; }
   .app p {
     color: #E0E4CC;
-    font-size: 20px;
+    font-size: 25px;
     width: 500px;
     margin: 20px 0; }
   .app .app-qr {
     background-color: #E0E4CC;
     border-radius: 10%;
     width: 160px;
-    padding: 15px;
-    margin: 20px; }
+    padding: 15px; }
 
 .subs {
   grid-column: 2 / 3;
@@ -332,11 +289,11 @@
     text-align: center;
     color: #E0E4CC;
     font-size: 40px;
-    margin: 20px; }
+    margin: 15px; }
   .subs p {
     color: #E0E4CC;
-    margin: 20px;
-    font-size: 20px;
+    margin: 15px;
+    font-size: 25px;
     text-align: center; }
   .subs input {
     background-color: #69d2e7;
@@ -357,7 +314,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 250px;
-  grid-template-areas: "mapa mapa geaweb geaweb redes redes";
+  grid-template-areas: "mapa mapa geaweb . redes redes";
   background-color: #f38530e1;
   border-radius: 10px;
   height: 250px;
@@ -453,36 +410,16 @@ footer {
   margin: 80px auto; }
   .section-crear-cuenta h2 {
     color: #E0E4CC;
-    font-size: 65px;
-    margin-bottom: 10px; }
-  .section-crear-cuenta .form-datos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px; }
-    .section-crear-cuenta .form-datos input {
-      background-color: #E0E4CC;
-      border: none;
-      border-radius: 7px;
-      height: 40px;
-      width: 50%; }
-      .section-crear-cuenta .form-datos input::placeholder {
-        text-align: center;
-        font-size: 20px; }
-    .section-crear-cuenta .form-datos label {
-      font-size: 30px;
-      color: #E0E4CC; }
-  .section-crear-cuenta .form-sexo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 10px; }
-    .section-crear-cuenta .form-sexo label {
-      font-size: 20px;
+    font-size: 65px; }
+  .section-crear-cuenta .form-control {
+    background-color: #E0E4CC;
+    font-weight: bold; }
+    .section-crear-cuenta .form-control::placeholder {
       color: #69d2e7;
-      margin-left: 10px; }
+      font-size: 20px; }
+  .section-crear-cuenta .form-check-label {
+    color: #69d2e7;
+    font-size: 20px; }
   .section-crear-cuenta .input-cuenta-nueva {
     background-color: #69d2e7;
     color: #E0E4CC;
@@ -499,15 +436,12 @@ footer {
       color: lightslategray; }
 
 .somos-titulo {
-  background-color: #f38530e1;
   text-align: center;
-  border-radius: 10px;
-  margin: 30px auto;
-  width: 600px; }
+  margin: 30px auto 0px; }
   .somos-titulo .nosotros-logo-globo {
     background-color: none;
-    margin: 15px 0;
-    width: 150px;
+    margin-top: 15px;
+    width: 190px;
     animation-name: rebote;
     animation: rebote 1.1s both; }
 
@@ -541,6 +475,22 @@ footer {
   .somos-titulo h1 {
     color: #E0E4CC;
     font-size: 75px; }
+
+.div-nosotros-texto {
+  background-color: #f38530e1;
+  border-radius: 10px;
+  height: 400px;
+  margin: 30px 35px; }
+  .div-nosotros-texto h2 {
+    color: #E0E4CC;
+    margin: 0 20px;
+    font-size: 65px;
+    text-align: center; }
+  .div-nosotros-texto p {
+    color: #E0E4CC;
+    text-align: justify;
+    margin: 10px 20px;
+    font-size: 20px; }
 
 .div-nosotros-fotos {
   display: grid;
@@ -576,47 +526,45 @@ footer {
     transform: scale(1.15) translateY(15px);
     transform-origin: bottom; } }
 
-.div-nosotros-texto {
-  background-color: #f38530e1;
-  border-radius: 10px;
-  height: 340px;
-  margin: 30px 35px; }
-  .div-nosotros-texto h2 {
-    color: #E0E4CC;
-    margin: 0 20px;
-    font-size: 65px;
-    text-align: center; }
-  .div-nosotros-texto p {
-    color: #E0E4CC;
-    text-align: justify;
-    margin: 10px 20px; }
-
 @media (max-width: 768px) {
   .header-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: none;
-    height: 400px; }
-    .header-container .nav--fixed {
-      display: none; }
+    background-size: cover;
+    width: 768px;
+    height: auto; }
     .header-container .div--header {
       display: flex;
-      height: 150px; }
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      height: 250px; }
       .header-container .div--header img {
         width: 150px;
-        height: 150px; }
-    .header-container .div--nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      align-items: center;
-      height: 150px; }
+        height: 180px;
+        margin-right: 80px; }
+      .header-container .div--header h1 {
+        font-size: 20px;
+        margin-right: 20px; }
+    .header-container nav {
+      background-color: transparent;
+      display: inline-block;
+      position: absolute; }
+      .header-container nav button {
+        background-color: #f38530e1; }
+      .header-container nav ul {
+        background-color: #f38530e1;
+        border-radius: 10px; }
+        .header-container nav ul li {
+          margin-left: 5px; }
   .busqueda-grid {
     display: flex;
     flex-direction: column;
     justify-content: none;
-    align-items: none; }
+    align-items: none;
+    width: 768px; }
     .busqueda-grid .busqueda-container {
       display: flex;
       flex-direction: column;
@@ -631,33 +579,53 @@ footer {
         width: 50%; }
       .busqueda-grid .busqueda-container .button--busqueda--rapida {
         margin: 10px 0 20px; }
-  .div-destinos {
-    display: flex;
-    flex-direction: column;
-    justify-content: none;
-    align-items: center; }
+  .destinos {
+    width: 768px; }
+    .destinos .div-destinos {
+      display: flex;
+      flex-direction: column;
+      justify-content: none;
+      align-items: center;
+      width: 768px; }
+      .destinos .div-destinos .cards-destinos {
+        margin: 10px;
+        height: 560px; }
   .sugerencias {
     display: flex;
-    flex-direction: column; }
-  .subs {
-    width: 700px;
-    margin: 20px 34px; }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 768px; }
+    .sugerencias .app {
+      width: auto;
+      justify-content: center; }
+    .sugerencias .subs {
+      width: 600px;
+      height: 420px;
+      margin: 20px 34px;
+      justify-content: center; }
   footer {
+    width: 768px;
     display: grid;
-    grid-template-columns: repeat(3, 33.33%);
-    grid-template-rows: repeat(3, 33.33%); }
+    margin-left: 0;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%); }
     footer .div--mapa {
       grid-column: 1/2;
-      grid-row: 1/3;
+      grid-row: 1/2;
       width: auto;
       margin: 0; }
     footer .div--geaweb {
-      grid-column: 1/4;
-      grid-row: 3/4;
-      width: 100vw; }
+      grid-column: 1/3;
+      grid-row: 2/3; }
+      footer .div--geaweb img {
+        height: 65px; }
+      footer .div--geaweb p {
+        height: 40px;
+        width: 768px; }
     footer .div--redes {
-      grid-column: 3/4;
-      grid-row: 1/3; }
+      grid-column: 2/3;
+      grid-row: 1/2; }
       footer .div--redes .logo--redes {
         margin: 10px; }
   .inicio--sesion {
@@ -707,61 +675,64 @@ footer {
     flex-direction: column;
     justify-content: none;
     align-items: none;
-    height: 390px; }
+    width: 100%;
+    height: 290px; }
     .header-container .div-header {
       display: flex;
       flex-direction: column;
       justify-content: none;
-      align-items: center; }
+      align-items: end; }
       .header-container .div-header img {
-        width: 290px;
-        height: 290px; }
+        width: 190px;
+        height: 190px; }
       .header-container .div-header h1 {
-        font-size: 22px; }
-    .header-container .div--nav {
-      align-self: center; }
-      .header-container .div--nav .nav--header {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: start; }
-        .header-container .div--nav .nav--header li {
-          margin: 5px; }
-          .header-container .div--nav .nav--header li a {
-            margin: 1px; }
-            .header-container .div--nav .nav--header li a img {
-              width: 50px;
-              height: 50px; }
-  .cards-destinos {
-    height: 900px; }
-    .cards-destinos .parrafo--destinos {
-      margin: 0 30px; }
-      .cards-destinos .parrafo--destinos p {
-        font-size: 14px; }
-  .app {
-    width: 91%;
-    height: 520px; }
-    .app .app-phone {
-      width: 100px;
-      height: 105px; }
-    .app h3 {
+        font-size: 10px; }
+  .busqueda-grid {
+    width: 100%; }
+  .destinos {
+    width: 100%; }
+    .destinos .div-destinos {
       width: 100%; }
-    .app p {
-      width: 91%; }
-    .app .app-qr {
-      width: 150px; }
-  .subs {
-    justify-self: center;
-    width: 88%;
-    height: 500px; }
-    .subs .logo-subs {
-      width: 100px; }
+      .destinos .div-destinos .cards-destinos {
+        height: auto;
+        align-self: center; }
+        .destinos .div-destinos .cards-destinos .parrafo--destinos {
+          margin: 0 30px; }
+          .destinos .div-destinos .cards-destinos .parrafo--destinos p {
+            font-size: 14px; }
+  .sugerencias {
+    width: 100%; }
+    .sugerencias .app {
+      width: 91%;
+      height: 390px; }
+      .sugerencias .app .app-phone {
+        width: 100px;
+        height: 105px; }
+      .sugerencias .app h3 {
+        width: 100%; }
+      .sugerencias .app p {
+        width: 91%; }
+      .sugerencias .app .app-qr {
+        width: 150px; }
+    .sugerencias .subs {
+      justify-self: center;
+      width: 88%;
+      height: 390px; }
+      .sugerencias .subs .logo-subs {
+        width: 100px;
+        margin: 0; }
   footer {
+    width: 100%;
     margin-top: 20px; }
     footer .div--redes {
       display: grid;
       grid-template-columns: repeat(2, 80px);
       grid-template-rows: repeat(2, 70px); }
+    footer .div--geaweb {
+      width: 100%; }
+      footer .div--geaweb p {
+        height: 75px;
+        width: 100%; }
   .inicio--sesion h2 {
     font-size: 40px; }
   .div--sesion img {
@@ -787,65 +758,67 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: none;
-    align-items: center;
+    align-items: none;
+    width: 100%;
+    height: 590px; }
+    .header-container .div-header img {
+      width: 80px;
+      height: 100px; }
+    .header-container .div-header h1 {
+      font-size: 10px;
+      text-align: end; }
+  .busqueda-grid {
     width: 100%; }
-    .header-container .div-header {
+    .busqueda-grid .busqueda-container {
       display: flex;
       flex-direction: column;
       justify-content: none;
-      align-items: center; }
-      .header-container .div-header img {
-        width: 15px;
-        height: 25px; }
-      .header-container .div-header h1 {
-        font-size: 15px; }
-    .header-container .div--nav {
-      align-self: center; }
-      .header-container .div--nav .nav--header {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: start; }
-        .header-container .div--nav .nav--header li {
-          margin: 5px; }
-          .header-container .div--nav .nav--header li a {
-            margin: 1px; }
-            .header-container .div--nav .nav--header li a img {
-              width: 50px;
-              height: 50px; }
-  .cards-destinos {
-    width: 300px;
-    height: 300px; }
-    .cards-destinos .fotoDestinos {
-      width: 300px; }
-    .cards-destinos .parrafo--destinos {
-      margin: 0 30px; }
-      .cards-destinos .parrafo--destinos p {
-        font-size: 14px; }
-  .app {
-    width: 91%;
-    height: 520px; }
-    .app .app-phone {
-      width: 100px;
-      height: 105px; }
-    .app h3 {
+      align-items: none; }
+  .destinos {
+    width: 100%; }
+    .destinos .div-destinos {
       width: 100%; }
-    .app p {
-      width: 91%; }
-    .app .app-qr {
-      width: 150px; }
-  .subs {
-    justify-self: center;
-    width: 88%;
-    height: 500px; }
-    .subs .logo-subs {
-      width: 100px; }
+      .destinos .div-destinos .cards-destinos {
+        width: 100%;
+        height: auto;
+        align-self: center; }
+        .destinos .div-destinos .cards-destinos .parrafo--destinos {
+          margin: 0 30px; }
+          .destinos .div-destinos .cards-destinos .parrafo--destinos p {
+            font-size: 14px; }
+  .sugerencias {
+    width: 100%; }
+    .sugerencias .app {
+      width: 91%;
+      height: 390px; }
+      .sugerencias .app .app-phone {
+        width: 100px;
+        height: 105px; }
+      .sugerencias .app h3 {
+        width: 100%; }
+      .sugerencias .app p {
+        width: 91%; }
+      .sugerencias .app .app-qr {
+        width: 150px; }
+    .sugerencias .subs {
+      justify-self: center;
+      width: 88%;
+      height: 390px; }
+      .sugerencias .subs .logo-subs {
+        width: 100px;
+        margin: 0; }
   footer {
+    width: 100%;
     margin-top: 20px; }
     footer .div--redes {
       display: grid;
       grid-template-columns: repeat(2, 80px);
       grid-template-rows: repeat(2, 70px); }
+    footer .div--geaweb {
+      width: 100%; }
+      footer .div--geaweb p {
+        height: 75px;
+        width: 100%; }
   .inicio--sesion h2 {
     font-size: 40px; }
   .div--sesion img {

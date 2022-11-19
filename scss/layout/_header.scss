@@ -4,56 +4,42 @@
     background-size: cover;
     box-shadow: 5px 5px 9px black;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 105px);
-    grid-template-areas: 
-    "nav--fixed nav--fixed nav--fixed nav--fixed"
-    "div--header div--header div--nav div--nav"
-    "div--header div--header div--nav div--nav"
-    "div--header div--header div--nav div--nav";
-    .nav--fixed {
-        grid-area: nav--fixed;
+    height: auto;
+    nav {
+        @include flex(row,end,none);
         background-color: $color-orange;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        width: 100%;
-        height: 85px;
-        text-align: center;
-        ul { 
-            @include flex(row,space-around,start);
-            margin-top: 15px;
-            height: 80px;        
-            li {
-                @include flex(row,center,start);
-                a {
-                    @include flex(column,start,center);
-                    height: 80px;
-                    color: $color-white;
-                    img {
-                        width: 45px;
-                    }
-                }
-            }
+        height: 50px;
+        img {
+            width: 40px;
+        }
+        label {
+            margin-left: 10px;
+            font-size: 22px;
+            color: $color-white;
+            cursor: pointer;
         }
     }
     .div--header {
-        grid-area: div--header;
-        @include flex(row,center,center);    
-        img {
-            @include flex(row,center,center);    
-            background-color: none;
-            width: 200px;
-            height: 200px;
-        }
-        h1 {
-            @include flex(row,start,end); 
-            color: $color-white;
-            margin-left: 30px;
-            font-size: 60px;
-            animation-name: tracking-in-expandp;
-            animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        }
+        @include flex(column,center,center);
+        margin-top: 20px;
+        a {
+            @include flex(column,none,center);
+            img {
+                @include flex(column,center,center);    
+                background-color: none;
+                width: 200px;
+                animation-name: tracking-in-expand;
+                animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            }
+            h1 {
+                @include flex(row,start,end); 
+                color: $color-white;
+                font-size: 60px;
+                animation-name: tracking-in-expand;
+                animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            }
+        }   
+        
         @keyframes tracking-in-expand {
             0% {
             letter-spacing: -0.5em;
@@ -67,31 +53,5 @@
             }
         }
     }
-    .div--nav {
-        grid-area: div--nav;
-        @include flex(row,end,start);
-        ul {
-            @include flex(row,start,start);
-            text-align: center;
-            a {
-                @include flex(column,center,center);   
-                background-color: $color-orange;
-                color: $color-white;
-                border-radius: 50%;
-                width: 120px;
-                height: 120px;
-                margin: 0px 30px;
-                &:hover {
-                    transform: scale(1.1);
-                    box-shadow: 3px 1px $color-blue;
-                    
-                }
-                img {    
-                    width: 55px;
-                    height: 55px;
-                    margin-top: 5px;
-                }
-            }
-        }
-    }
+    
 }

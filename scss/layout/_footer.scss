@@ -3,7 +3,7 @@ footer {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 250px;
     grid-template-areas: 
-    "mapa mapa geaweb geaweb redes redes";
+    "mapa mapa geaweb . redes redes";
     background-color: $color-orange;
     border-radius: 10px;
     height: 250px;
@@ -27,7 +27,7 @@ footer {
     .div--geaweb{
         grid-area: geaweb;
         align-self: end;
-        text-align: center;
+        text-align: center;        
         width: 750px;
         .logo--geaweb {
             background-color: $color-white;

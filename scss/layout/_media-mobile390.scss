@@ -1,83 +1,88 @@
 @media (max-width: 390px) {
     .header-container {
-        @include flex(column,none,center);
-        width: 100%;    
+        @include flex(column,none,none);
+        width: 100%;
+        height: 590px;        
         .div-header{
-            @include flex(column,none,center);
             img {
-                width: 15px;
-                height: 25px;
+                width: 80px;
+                height: 100px;
             }
             h1 {
-                font-size: 15px;
+                font-size: 10px;
+                text-align: end; 
             }
         }
-        .div--nav {
-            align-self: center;
-            .nav--header {
-                @include flex (row,start,start);
-                li{
-                    margin: 5px;                
-                    a {
-                        margin: 1px;
-                        img {
-                            width: 50px;
-                            height: 50px;
-                        }
+    }
+    .busqueda-grid {        
+        width: 100%;
+        .busqueda-container {
+            @include flex(column,none,none);
+        }
+    }
+    .destinos {
+        width: 100%;
+        .div-destinos {
+            width: 100%;
+            .cards-destinos {
+                width: 100%;
+                height: auto;
+                align-self: center;
+                .parrafo--destinos {
+                    margin: 0 30px;
+                    p {
+                    font-size: 14px;
                     }
                 }
             }
         }
-    }    
-    .cards-destinos {
-        width: 300px;
-        height: 300px;
-        .fotoDestinos {
-            width: 300px;
+    }
+    .sugerencias {
+        width: 100%;
+        .app {
+            width: 91%;
+            height: 390px;
+            .app-phone {
+                width: 100px;
+                height: 105px;
+            }
+            h3 {        
+                width: 100%;
+            }
+            p{
+                width: 91%;
+            }
+            .app-qr {
+                
+                width: 150px;
+            }
         }
-        .parrafo--destinos {
-            margin: 0 30px;
-            p {
-            font-size: 14px;
+        .subs {
+            justify-self: center;
+            width: 88%;
+            height: 390px;
+            .logo-subs {
+                width: 100px;
+                margin: 0;
             }
         }
     }
-    .app {
-        width: 91%;
-        height: 520px;
-        .app-phone {
-            width: 100px;
-            height: 105px;
-        }
-        h3 {        
-            width: 100%;
-        }
-        p{
-            width: 91%;
-        }
-        .app-qr {
-            
-            width: 150px;
-        }
-    }
-    .subs {
-        justify-self: center;
-        width: 88%;
-        height: 500px;
-        .logo-subs {
-            width: 100px;
-        }
-    }
-    
     footer{
+        width: 100%;
         margin-top: 20px;
         .div--redes {
             display: grid;
-            grid-template-columns: repeat(2, 80px );
+            grid-template-columns: repeat(2, 80px);
             grid-template-rows: repeat(2, 70px);
         }
-    }
-    
+        .div--geaweb {
+            width: 100%;
+            p {
+                height: 75px;
+                width: 100%;
+            }
+        }
+    }    
     .inicio--sesion h2 {
         font-size: 40px;
     }
