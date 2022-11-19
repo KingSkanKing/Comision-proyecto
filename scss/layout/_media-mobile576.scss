@@ -2,7 +2,10 @@
     .header-container {
         @include flex(column,none,none);
         width: 100%;
-        height: 290px;        
+        height: 290px;
+        nav {
+            z-index: 30;
+        }        
         .div-header{
             @include flex(column,none,end);
             img {

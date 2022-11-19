@@ -4,23 +4,11 @@
         background-size: cover;
         width: 768px;
         height: auto;
-        .div--header {
-            @include flex(column,center,end);
-            height: 250px;
-            img {
-                width: 150px;
-                height: 180px;
-                margin-right: 80px;
-            }
-            h1 {
-                font-size: 20px;
-                margin-right: 20px;
-            }
-        }
         nav {
             background-color: transparent;
             display: inline-block;            
             position: absolute;
+            z-index: 30;
             button {
                 background-color: $color-orange;
             }
@@ -32,6 +20,18 @@
                 }
             }
         }
+        .div--header {
+            @include flex(column,center,center);
+            height: 250px;
+            img {
+                width: 150px;
+                height: 180px;
+            }
+            h1 {
+                font-size: 20px;
+                margin-right: 20px;
+            }
+        }        
     }
     .busqueda-grid {
         @include flex(column,none,none);
