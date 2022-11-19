@@ -4,9 +4,6 @@
         background-size: cover;
         width: 768px;
         height: auto;
-        // .nav--fixed {
-        //     display: none;
-        // }
         .div--header {
             @include flex(column,center,end);
             height: 250px;
@@ -35,10 +32,6 @@
                 }
             }
         }
-        // .div--nav {
-        //     @include flex(column,end,center);
-        //     height: 150px;   
-        // }
     }
     .busqueda-grid {
         @include flex(column,none,none);
@@ -67,7 +60,7 @@
         width: 768px;
             .cards-destinos {
                 margin: 10px;
-                height: 560px;
+                height: 570px;
                 p {
                     font-size: 20px;
                 }

@@ -64,10 +64,16 @@
       .header-container .div--header a h1 {
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: center;
         align-items: end;
         color: #E0E4CC;
+        background-color: #f38530ad;
+        width: 430px;
+        margin-top: 10px;
+        text-align: center;
         font-size: 60px;
+        font-weight: bold;
+        border-radius: 10px;
         animation-name: tracking-in-expand;
         animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
 
@@ -597,7 +603,7 @@ footer {
       width: 768px; }
       .destinos .div-destinos .cards-destinos {
         margin: 10px;
-        height: 560px; }
+        height: 570px; }
         .destinos .div-destinos .cards-destinos p {
           font-size: 20px; }
   .sugerencias {
@@ -733,92 +739,6 @@ footer {
         margin: 0; }
   footer {
     width: 100%;
-    margin-top: 20px; }
-    footer .div--redes {
-      display: grid;
-      grid-template-columns: repeat(2, 80px);
-      grid-template-rows: repeat(2, 70px); }
-    footer .div--geaweb {
-      width: 100%; }
-      footer .div--geaweb p {
-        height: 75px;
-        width: 100%; }
-  .inicio--sesion h2 {
-    font-size: 40px; }
-  .div--sesion img {
-    width: 50px; }
-    .div--sesion img input {
-      height: 50px; }
-  .section-crear-cuenta {
-    width: 100%; }
-  .nosotros-logo-globo {
-    width: 100px; }
-  .somos-titulo {
-    width: 100%; }
-    .somos-titulo h1 {
-      font-size: 50px; }
-  .div-nosotros-fotos {
-    display: flex;
-    flex-direction: column;
-    justify-content: none;
-    align-items: center; } }
-
-@media (max-width: 390px) {
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: none;
-    align-items: end;
-    width: 390px;
-    height: 590px; }
-    .header-container .div-header img {
-      width: 50px;
-      height: 60px; }
-    .header-container .div-header h1 {
-      font-size: 10px;
-      text-align: end; }
-  .busqueda-grid {
-    width: 390px; }
-    .busqueda-grid .busqueda-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: none;
-      align-items: none; }
-  .destinos {
-    width: 390px; }
-    .destinos .div-destinos {
-      width: 390px; }
-      .destinos .div-destinos .cards-destinos {
-        width: 100%;
-        height: auto;
-        align-self: center; }
-        .destinos .div-destinos .cards-destinos .parrafo--destinos {
-          margin: 0 30px; }
-          .destinos .div-destinos .cards-destinos .parrafo--destinos p {
-            font-size: 14px; }
-  .sugerencias {
-    width: 390px; }
-    .sugerencias .app {
-      width: 91%;
-      height: 590px; }
-      .sugerencias .app .app-phone {
-        width: 100px;
-        height: 105px; }
-      .sugerencias .app h3 {
-        width: 390px; }
-      .sugerencias .app p {
-        width: 91%; }
-      .sugerencias .app .app-qr {
-        width: 150px; }
-    .sugerencias .subs {
-      justify-self: center;
-      width: 390px;
-      height: 390px; }
-      .sugerencias .subs .logo-subs {
-        width: 100px;
-        margin: 0; }
-  footer {
-    width: 390px;
     margin-top: 20px; }
     footer .div--redes {
       display: grid;

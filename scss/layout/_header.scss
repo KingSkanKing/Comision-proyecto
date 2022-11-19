@@ -34,9 +34,15 @@
                 animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             }
             h1 {
-                @include flex(row,start,end); 
+                @include flex(row,center,end); 
                 color: $color-white;
+                background-color: #f38530ad;
+                width: 430px;
+                margin-top: 10px;
+                text-align: center;
                 font-size: 60px;
+                font-weight: bold;
+                border-radius: 10px;
                 animation-name: tracking-in-expand;
                 animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             }
