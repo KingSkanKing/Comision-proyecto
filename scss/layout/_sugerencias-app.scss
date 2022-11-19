@@ -10,9 +10,10 @@
     display: flex;
     grid-template-columns: 200px 400px;
     .app-phone {
-        width: 200px;
-        height: 210px;
+        width: 170px;
+        height: 180px;
         margin-top: 40px;
+
     }
     h3 {
         color: $color-blue;
@@ -28,7 +29,8 @@
     .app-qr {
         background-color: $color-white;
         border-radius: 10%;
-        width: 160px;
+        width: 140px;
+        height: auto;
         padding: 15px;
     }
 }
